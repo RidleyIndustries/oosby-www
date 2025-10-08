@@ -107,7 +107,7 @@ const content = {
       <div class="relative px-6 py-16 lg:px-16 lg:py-24">
         <div class="mx-auto max-w-4xl text-center">
           <!-- H1 uses DM Serif Display - white for contrast -->
-          <h1 class="mb-6 text-5xl font-normal tracking-tight text-white lg:text-6xl">
+          <h1 class="mb-6 text-5xl font-normal tracking-tight text-white lg:text-6xl font-display">
             {content.hero.headline}
           </h1>
 
@@ -138,7 +138,7 @@ const content = {
       <div class="container mx-auto px-4">
         <div class="mx-auto max-w-3xl text-center">
           <!-- h2 uses Inter Tight (font-display-tight) - BOLD for visual weight -->
-          <h2 class="mb-6 text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl">
+          <h2 class="mb-6 text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight">
             {content.problem.heading}
           </h2>
 
@@ -171,7 +171,7 @@ const content = {
       <div class="container mx-auto px-4">
         <div class="mx-auto max-w-5xl">
           <h2
-            class="mb-20 text-center text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl"
+            class="mb-20 text-center text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight"
           >
             {content.solution.heading}
           </h2>
@@ -235,10 +235,10 @@ const content = {
 
           <!-- Demo Card -->
           <div class="mx-auto max-w-md">
-            <Card class="border-gray-200 bg-white hover:bg-gray-50">
+            <Card class="border-oosby-border bg-oosby-surface-2 hover:bg-oosby-card-hover">
               <div class="p-6">
                 <h3 class="text-xl font-semibold text-oosby-text mb-2">{content.solution.demoCard.title}</h3>
-                <p class="text-oosby-text/70">{content.solution.demoCard.subtitle}</p>
+                <p class="text-oosby-text-muted">{content.solution.demoCard.subtitle}</p>
               </div>
             </Card>
           </div>

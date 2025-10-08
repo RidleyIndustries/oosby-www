@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				// Oosby Brand Identity
+				// Oosby Brand Identity - Core colors
 				'oosby-pink': '#f966f2', // Primary brand pink (logo + accents)
 				'oosby-pink-func': '#e63ad9', // Functional pink (buttons, primary CTA)
 				'oosby-plum': '#4e006b', // Digital plum (text, headings, alt CTA)
@@ -13,6 +13,17 @@ export default {
 				'oosby-gray': '#f8f2f6', // Warm gray (surfaces, cards)
 				'oosby-bg': '#fffafc', // Off-white background
 				'oosby-text': '#222222', // Default text
+
+				// Oosby Semantic tokens
+				'oosby-surface': '#f8f2f6',
+				'oosby-surface-2': '#ffffff',
+				'oosby-border': '#e9e1ec',
+				'oosby-text-muted': '#5a5a66',
+				'oosby-focus': '#7fd8ff',
+				'oosby-success': '#1aa579',
+				'oosby-warning': '#ffb020',
+				'oosby-danger': '#ff5470',
+				'oosby-card-hover': '#f3ecf5',
 
 				// Marketing-specific semantic colors
 				success: {

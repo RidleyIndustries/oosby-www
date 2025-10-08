@@ -1,1 +1,86 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+	/* Custom font families */
+	--font-family-sans: Inter, system-ui, sans-serif;
+	--font-family-display: 'DM Serif Display', sans-serif;
+	--font-family-display-tight: 'Inter Tight', Inter, system-ui, sans-serif;
+
+	/* Extended font sizes for large display text */
+	--font-size-10xl: 10rem;
+	--font-size-10xl--line-height: 1;
+	--font-size-11xl: 11rem;
+	--font-size-11xl--line-height: 1;
+	--font-size-12xl: 12rem;
+	--font-size-12xl--line-height: 1;
+
+	/* Oosby brand colors - Light mode */
+	--color-oosby-pink: #f966f2;
+	--color-oosby-pink-func: #e63ad9;
+	--color-oosby-plum: #4e006b;
+	--color-oosby-teal: #00e1c6;
+	--color-oosby-teal-func: #009c8e;
+	--color-oosby-gray: #f8f2f6;
+	--color-oosby-bg: #fffafc;
+	--color-oosby-text: #222222;
+
+	/* Oosby semantic tokens - Light mode */
+	--color-oosby-surface: #f8f2f6;
+	--color-oosby-surface-2: #ffffff;
+	--color-oosby-border: #e9e1ec;
+	--color-oosby-text-muted: #5a5a66;
+	--color-oosby-focus: #7fd8ff;
+	--color-oosby-success: #1aa579;
+	--color-oosby-warning: #ffb020;
+	--color-oosby-danger: #ff5470;
+	--color-oosby-card-hover: #f3ecf5;
+
+	/* Letter spacing for headings (negative tracking) */
+	--letter-spacing--01: -0.01em;
+	--letter-spacing--015: -0.015em;
+}
+
+:root {
+	--radius: 0.625rem;
+}
+
+.dark {
+	/* Oosby dark mode overrides */
+	--color-oosby-bg: #0f0a13;
+	--color-oosby-surface: #16111d;
+	--color-oosby-surface-2: #1e1628;
+	--color-oosby-border: #2a1f36;
+	--color-oosby-text: #eae6ef;
+	--color-oosby-text-muted: #cbbdd6;
+	--color-oosby-plum: #cdb3e1;
+	--color-oosby-teal-func: #18b3a3;
+	--color-oosby-success: #33d69f;
+	--color-oosby-card-hover: #231b2f;
+	--color-oosby-focus: #7fd8ff;
+	--color-oosby-warning: #ffb020;
+	--color-oosby-danger: #ff5470;
+}
+
+@layer base {
+	* {
+		@apply outline-offset-2;
+	}
+	body {
+		@apply bg-oosby-bg text-oosby-text;
+		font-family: var(--font-family-sans);
+	}
+	
+	/* Font hierarchy: DM Serif Display for H1 only, Inter Tight for h2-h6 */
+	h1 {
+		font-family: var(--font-family-display);
+	}
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-family-display-tight);
+	}
+}

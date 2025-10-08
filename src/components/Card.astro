@@ -6,6 +6,6 @@ export interface Props {
 const { class: className = '' } = Astro.props;
 ---
 
-<div class={`rounded-lg border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow ${className}`}>
+<div class={`rounded-lg border border-oosby-border bg-oosby-surface-2 shadow-sm hover:bg-oosby-card-hover transition-colors ${className}`}>
   <slot />
 </div>
