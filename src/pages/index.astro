@@ -42,9 +42,63 @@ const content = {
         description: "We'll nudge you just in time - and leave you alone the rest of the time."
       }
     },
+    cta: 'Add your first Thing',
     demoCard: {
       title: 'Car',
       subtitle: 'MOT due in 5 days'
+    }
+  },
+  benefits: {
+    heading: 'What calm feels like',
+    items: {
+      headspace: {
+        title: 'Fewer chores. More headspace.',
+        description: 'Oosby takes care of the details, so you can focus on what matters.'
+      },
+      confidence: {
+        title: 'Quiet confidence.',
+        description: 'No more missed renewals or last-minute scrambles.'
+      },
+      shared: {
+        title: 'Shared understanding.',
+        description: 'Invite your partner, housemate, or sitter — everyone stays in sync.'
+      },
+      privacy: {
+        title: 'Privacy built in.',
+        description: 'Your household, your data, always under your control.'
+      }
+    }
+  },
+  socialProof: {
+    heading: 'People who found their calm',
+    testimonials: {
+      ella: {
+        quote: 'I used to juggle calendars, emails, and sticky notes. Now Oosby does it quietly in the background - and I feel lighter.',
+        author: 'Ella, Brighton'
+      },
+      james: {
+        quote: "Finally, an app that doesn't add noise. It just helps.",
+        author: 'James, London'
+      }
+    }
+  },
+  integrations: {
+    heading: 'The little extras',
+    description: "Add helpful offers and insights, tailored to your household. Because when your car needs care, it's good to know who to call."
+  },
+  ctaBlock: {
+    heading: 'Ready for calm?',
+    description: 'Join thousands of households making life admin disappear.',
+    cta: 'Get started',
+    reassurance: 'Free to try. No credit card needed.'
+  },
+  footer: {
+    tagline: 'Oosby is your quietly clever household companion. Built for calm, designed for trust.',
+    copyright: '© Oosby 2025',
+    links: {
+      privacy: 'Privacy',
+      terms: 'Terms',
+      contact: 'Contact'
     }
   }
 };
@@ -237,13 +291,230 @@ const content = {
           <div class="mx-auto max-w-md">
             <Card class="border-oosby-border bg-oosby-surface-2 hover:bg-oosby-card-hover">
               <div class="p-6">
-                <h3 class="text-xl font-semibold text-oosby-text mb-2">{content.solution.demoCard.title}</h3>
-                <p class="text-oosby-text-muted">{content.solution.demoCard.subtitle}</p>
+                <div class="flex items-center gap-4">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-oosby-pink/10">
+                    <!-- Check circle icon -->
+                    <svg class="h-6 w-6 text-oosby-pink-func" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="text-xl font-semibold text-oosby-plum mb-1">{content.solution.demoCard.title}</h3>
+                    <p class="text-sm text-oosby-text-muted">{content.solution.demoCard.subtitle} • Reminder set 2 days before</p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+
+          <!-- CTA -->
+          <div class="mt-10 text-center">
+            <Button
+              variant="oosby-primary"
+              size="lg"
+              href="https://app.oosby.com/register"
+              class="bg-oosby-plum hover:bg-oosby-plum/90 text-white"
+            >
+              {content.solution.cta} →
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Benefits - "What Calm Feels Like" -->
+    <section class="bg-oosby-gray py-24">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-6xl">
+          <h2 class="mb-20 text-center text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight">
+            {content.benefits.heading}
+          </h2>
+
+          <!-- 4 Benefits Grid -->
+          <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <!-- Headspace -->
+            <div class="rounded-2xl bg-oosby-bg p-8 shadow-sm">
+              <h3 class="mb-4 text-xl font-bold text-oosby-plum">
+                {content.benefits.items.headspace.title}
+              </h3>
+              <p class="text-base leading-7 text-oosby-text">
+                {content.benefits.items.headspace.description}
+              </p>
+            </div>
+
+            <!-- Confidence -->
+            <div class="rounded-2xl bg-oosby-bg p-8 shadow-sm">
+              <h3 class="mb-4 text-xl font-bold text-oosby-plum">
+                {content.benefits.items.confidence.title}
+              </h3>
+              <p class="text-base leading-7 text-oosby-text">
+                {content.benefits.items.confidence.description}
+              </p>
+            </div>
+
+            <!-- Shared -->
+            <div class="rounded-2xl bg-oosby-bg p-8 shadow-sm">
+              <h3 class="mb-4 text-xl font-bold text-oosby-plum">
+                {content.benefits.items.shared.title}
+              </h3>
+              <p class="text-base leading-7 text-oosby-text">
+                {content.benefits.items.shared.description}
+              </p>
+            </div>
+
+            <!-- Privacy -->
+            <div class="rounded-2xl bg-oosby-bg p-8 shadow-sm">
+              <h3 class="mb-4 text-xl font-bold text-oosby-plum">
+                {content.benefits.items.privacy.title}
+              </h3>
+              <p class="text-base leading-7 text-oosby-text">
+                {content.benefits.items.privacy.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Social Proof - "People Who Found Their Calm" -->
+    <section class="py-28">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-5xl">
+          <h2 class="mb-20 text-center text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight">
+            {content.socialProof.heading}
+          </h2>
+
+          <!-- Testimonials -->
+          <div class="grid gap-10 md:grid-cols-2">
+            <!-- Ella -->
+            <Card class="border-oosby-border bg-oosby-surface shadow-md">
+              <div class="p-10">
+                <p class="mb-6 text-xl font-medium italic leading-relaxed text-oosby-text">
+                  "{content.socialProof.testimonials.ella.quote}"
+                </p>
+                <p class="text-sm font-semibold text-oosby-text-muted">
+                  — {content.socialProof.testimonials.ella.author}
+                </p>
+              </div>
+            </Card>
+
+            <!-- James -->
+            <Card class="border-oosby-border bg-oosby-surface shadow-md">
+              <div class="p-10">
+                <p class="mb-6 text-xl font-medium italic leading-relaxed text-oosby-text">
+                  "{content.socialProof.testimonials.james.quote}"
+                </p>
+                <p class="text-sm font-semibold text-oosby-text-muted">
+                  — {content.socialProof.testimonials.james.author}
+                </p>
               </div>
             </Card>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Section 6: Integrations - "The Little Extras" -->
+    <section class="bg-oosby-bg py-24">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="mb-6 text-3xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-4xl font-display-tight">
+            {content.integrations.heading}
+          </h2>
+          <p class="text-xl font-semibold leading-relaxed text-oosby-text">
+            {content.integrations.description}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: CTA Block - Enhanced Gradient with Depth -->
+    <section class="py-28">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl rounded-3xl bg-gradient-to-br from-oosby-pink-func via-oosby-plum to-oosby-plum/80 p-16 text-center text-white shadow-2xl shadow-oosby-plum/20 lg:p-20">
+          <h2 class="mb-6 text-4xl font-bold lg:text-5xl font-display-tight">
+            {content.ctaBlock.heading}
+          </h2>
+          <p class="mb-10 text-xl font-medium text-oosby-bg/90">
+            {content.ctaBlock.description}
+          </p>
+          <Button
+            variant="oosby-primary"
+            size="lg"
+            href="https://app.oosby.com/register"
+            class="bg-white text-oosby-plum transition-transform hover:scale-105 hover:bg-oosby-bg"
+          >
+            {content.ctaBlock.cta} →
+          </Button>
+          <p class="mt-6 text-sm font-medium text-oosby-bg/80">
+            {content.ctaBlock.reassurance}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Footer - Spotify-style full-bleed -->
+    <footer class="bg-black py-8">
+      <div class="px-6 lg:px-16">
+        <!-- Logo and Columns -->
+        <div class="grid gap-8 md:grid-cols-4 lg:grid-cols-5">
+          <!-- Logo -->
+          <div>
+            <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert" />
+          </div>
+
+          <!-- Company -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Company</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/about" class="text-xs text-white/90 transition hover:text-white">About</a>
+              </li>
+              <li>
+                <a href="/contact" class="text-xs text-white/90 transition hover:text-white">{content.footer.links.contact}</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Useful Links -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Useful Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#solution" class="text-xs text-white/90 transition hover:text-white">Premium</a>
+              </li>
+              <li>
+                <a href="#" class="text-xs text-white/90 transition hover:text-white">Support</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Legal</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/privacy" class="text-xs text-white/90 transition hover:text-white">{content.footer.links.privacy}</a>
+              </li>
+              <li>
+                <a href="/terms" class="text-xs text-white/90 transition hover:text-white">{content.footer.links.terms}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="mt-12 border-t border-white/10 pt-8">
+          <div class="flex flex-col items-center justify-between gap-4 md:flex-row">
+            <p class="text-xs text-white/60">
+              {content.footer.tagline}
+            </p>
+            <p class="text-xs text-white/60">
+              {content.footer.copyright}
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </Layout>
