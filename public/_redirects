@@ -1,0 +1,22 @@
+# Redirect common marketing URLs to app
+/signin https://app.oosby.com/signin 302
+/login https://app.oosby.com/signin 302  
+/register https://app.oosby.com/register 302
+/signup https://app.oosby.com/register 302
+/app https://app.oosby.com/ 302
+/dashboard https://app.oosby.com/dashboard 302
+
+# Handle trailing slashes
+/about/ /about 301
+/pricing/ /pricing 301
+/contact/ /contact 301
+
+# Future pages (return 200 for now, will create these pages later)
+/about /index.html 200
+/pricing /index.html 200  
+/contact /index.html 200
+/privacy /index.html 200
+/terms /index.html 200
+
+# Fallback for any unmatched routes
+/* /index.html 200

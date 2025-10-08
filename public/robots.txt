@@ -4,6 +4,14 @@
 User-agent: *
 Allow: /
 
+# Marketing site - allow all crawling
+Disallow: /admin
+Disallow: /api
+Disallow: /.well-known
+
+# Sitemap (will need to be generated)
+Sitemap: https://www.oosby.com/sitemap.xml
+
 # Disallow crawling of app area (authenticated routes)
 Disallow: /app/
 Disallow: /auth/
