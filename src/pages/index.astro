@@ -442,7 +442,7 @@ const content = {
             variant="oosby-primary"
             size="lg"
             href="https://app.oosby.com/register"
-            class="bg-white text-oosby-plum hover:bg-oosby-bg transition-transform hover:scale-105 font-medium"
+            class="!bg-white !text-oosby-plum hover:!bg-oosby-bg transition-transform hover:scale-105 font-medium"
           >
             {content.ctaBlock.cta} →
           </Button>
@@ -460,7 +460,10 @@ const content = {
         <div class="grid gap-8 md:grid-cols-4 lg:grid-cols-5">
           <!-- Logo -->
           <div>
-            <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert" />
+            <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert mb-4" />
+            <p class="text-xs text-white/60 leading-relaxed max-w-48">
+              Oosby is your quietly clever<br />household companion.<br />Built for calm, designed for trust.
+            </p>
           </div>
 
           <!-- Company -->
@@ -505,10 +508,7 @@ const content = {
 
         <!-- Bottom Section -->
         <div class="mt-12 border-t border-white/10 pt-8">
-          <div class="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <p class="text-xs text-white/60">
-              {content.footer.tagline}
-            </p>
+          <div class="flex justify-end">
             <p class="text-xs text-white/60">
               {content.footer.copyright}
             </p>
