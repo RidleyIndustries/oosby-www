@@ -1,0 +1,390 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout title="Terms & Conditions - Oosby" description="Terms & Conditions for Oosby's websites, apps, and services. Clear, transparent, and written in plain English.">
+  <div class="min-h-screen bg-oosby-bg">
+    <!-- Navigation Bar - Black -->
+    <header class="sticky top-0 z-50 h-16 border-b border-white/10 bg-black backdrop-blur-sm">
+      <nav class="flex h-full items-center justify-between px-6 lg:px-16">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <a href="/">
+            <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert" />
+          </a>
+        </div>
+
+        <!-- Navigation Links & Actions -->
+        <div class="flex items-center gap-6">
+          <a href="/#solution" class="hidden text-sm text-white/90 transition hover:text-white md:block">
+            Premium
+          </a>
+          <a href="#" class="hidden text-sm text-white/90 transition hover:text-white md:block">
+            Support
+          </a>
+          <Button
+            variant="outline"
+            size="sm"
+            href="https://app.oosby.com/register"
+            class="hidden border-white/20 bg-transparent text-white hover:bg-white/10 md:flex"
+          >
+            Sign Up
+          </Button>
+          <Button
+            variant="oosby-primary"
+            size="sm"
+            href="https://app.oosby.com/signin"
+            class="bg-oosby-pink-func hover:bg-oosby-pink"
+          >
+            Sign In
+          </Button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 lg:py-20">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl text-center">
+          <h1 class="mb-6 text-5xl font-normal tracking-tight text-oosby-plum lg:text-6xl font-display">
+            Terms & Conditions
+          </h1>
+          <p class="text-sm text-oosby-text-muted mb-8">
+            Last updated: 8th October 2025
+          </p>
+          <div class="mx-auto max-w-3xl text-lg leading-relaxed text-oosby-text">
+            <p class="mb-4">
+              Welcome to <strong>Oosby</strong>.
+              These Terms & Conditions ("Terms") explain how you can use Oosby's websites, apps, and services.
+              Please read them carefully — by using Oosby, you agree to these Terms.
+            </p>
+            <p class="font-medium text-oosby-plum">
+              If you don't agree, you must not use our services.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terms Content -->
+    <section class="py-8">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl">
+          <div class="prose prose-lg prose-oosby max-w-none">
+            
+            <!-- Section 1 -->
+            <div class="mb-12">
+              <h2 class="text-3xl font-bold tracking-[-0.015em] text-oosby-plum mb-6 font-display-tight">
+                1. Who we are
+              </h2>
+              <div class="space-y-4 text-oosby-text leading-relaxed">
+                <p>
+                  Oosby is operated by <strong>Ridley Industries Ltd</strong>, a company registered in England and Wales.<br>
+                  Registered office: 1st Floor Blackdown House, Blackbrook Business Park TA1 2PX<br>
+                  Company number: 07297291<br>
+                  Contact: <a href="mailto:support@oosby.com" class="text-oosby-pink-func hover:text-oosby-pink underline">support@oosby.com</a>
+                </p>
+                <p>We build tools to help households manage their important information easily and securely.</p>
+              </div>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="mb-12">
+              <h2 class="text-3xl font-bold tracking-[-0.015em] text-oosby-plum mb-6 font-display-tight">
+                2. What Oosby provides
+              </h2>
+              <div class="space-y-4 text-oosby-text leading-relaxed">
+                <p>
+                  Oosby offers a digital platform (the "Service") that allows users to store and manage household-related information such as insurance renewals, vehicle details, maintenance reminders, and similar records.
+                </p>
+                <p>The Service is available via:</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                  <li>our web application at <strong>app.oosby.com</strong>, and</li>
+                  <li>our brochure and information site at <strong>www.oosby.com</strong>.</li>
+                </ul>
+                <p>We may introduce additional features or paid plans from time to time.</p>
+              </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="mb-12">
+              <h2 class="text-3xl font-bold tracking-[-0.015em] text-oosby-plum mb-6 font-display-tight">
+                3. Who can use Oosby
+              </h2>
+              <div class="space-y-4 text-oosby-text leading-relaxed">
+                <p>To use Oosby you must:</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                  <li>be at least <strong>18 years old</strong>, and</li>
+                  <li>have the legal capacity to enter into a contract in your country of residence.</li>
+                </ul>
+                <p>By creating an account, you confirm that the information you provide is accurate and up to date.</p>
+              </div>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="mb-12">
+              <h2 class="text-3xl font-bold tracking-[-0.015em] text-oosby-plum mb-6 font-display-tight">
+                4. Your account and security
+              </h2>
+              <div class="space-y-4 text-oosby-text leading-relaxed">
+                <p>
+                  Oosby uses <strong>password-free authentication</strong> (passkeys, Apple, or Google sign-in).
+                  You are responsible for maintaining the security of your login credentials and any connected accounts.
+                </p>
+                <p>
+                  If you suspect unauthorised access, contact us immediately at <a href="mailto:support@oosby.com" class="text-oosby-pink-func hover:text-oosby-pink underline">support@oosby.com</a>.
+                </p>
+                <p>We may suspend or terminate accounts that breach these Terms or are used for unlawful purposes.</p>
+              </div>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="mb-12">
+              <h2 class="text-3xl font-bold tracking-[-0.015em] text-oosby-plum mb-6 font-display-tight">
+                5. Privacy and data protection
+              </h2>
+              <div class="space-y-4 text-oosby-text leading-relaxed">
+                <p>
+                  Your privacy matters to us.
+                  Our <a href="/trust" class="text-oosby-pink-func hover:text-oosby-pink underline">Privacy & Trust Policy</a> explains how we collect, use, and protect your information.
+                </p>
+                <p>In summary:</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                  <li>We store UK users' data in the <strong>United Kingdom</strong> (other users in their own country where possible).</li>
+                  <li>We <strong>never sell or share your information with advertisers</strong>.</li>
+                  <li>We process data solely to deliver and improve the Service.</li>
+                </ul>
+                <p>By using Oosby, you agree that we may process your personal data in accordance with our Privacy Policy.</p>
+              </div>
+            </div>
+
+            <!-- Section 6 -->
+            <div class="mb-12">
+              <h2 class="text-3xl font-bold tracking-[-0.015em] text-oosby-plum mb-6 font-display-tight">
+                6. Subscription and payment (if applicable)
+              </h2>
+              <div class="space-y-4 text-oosby-text leading-relaxed">
+                <p>
+                  Some Oosby features may be free, while others may require a subscription.
+                  Pricing and plan details will always be made clear before you choose to subscribe.
+                </p>
+                <p>If applicable:</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                  <li>Subscriptions renew automatically unless cancelled before the renewal date.</li>
+                  <li>You may cancel at any time through your account settings; cancellation takes effect at the end of the current billing period.</li>
+                  <li>We reserve the right to change pricing, with reasonable notice.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Section 7 -->
+            <div class="mb-12">
+              <h2 class="text-3xl font-bold tracking-[-0.015em] text-oosby-plum mb-6 font-display-tight">
+                7. Acceptable use
+              </h2>
+              <div class="space-y-4 text-oosby-text leading-relaxed">
+                <p>You agree not to:</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                  <li>use Oosby for unlawful purposes or to store illegal content,</li>
+                  <li>attempt to gain unauthorised access to our systems, or</li>
+                  <li>use the Service in a way that could damage, disable, or impair Oosby for others.</li>
+                </ul>
+                <p>We may remove or restrict access to content that violates these rules.</p>
+              </div>
+            </div>
+
+            <!-- Section 8 -->
+            <div class="mb-12">
+              <h2 class="text-3xl font-bold tracking-[-0.015em] text-oosby-plum mb-6 font-display-tight">
+                8. Intellectual property
+              </h2>
+              <div class="space-y-4 text-oosby-text leading-relaxed">
+                <p>
+                  All software, design, text, graphics, and trademarks on Oosby are owned by or licensed to <strong>Ridley Industries Ltd</strong>.
+                </p>
+                <p>
+                  You may use Oosby's content and materials only as part of the Service.
+                  You must not copy, modify, distribute, or use them for any commercial purpose without our permission.
+                </p>
+              </div>
+            </div>
+
+            <!-- Section 9 -->
+            <div class="mb-12">
+              <h2 class="text-3xl font-bold tracking-[-0.015em] text-oosby-plum mb-6 font-display-tight">
+                9. Availability and changes
+              </h2>
+              <div class="space-y-4 text-oosby-text leading-relaxed">
+                <p>
+                  We work hard to keep Oosby reliable and secure, but we cannot guarantee uninterrupted service.
+                  We may modify, suspend, or discontinue any part of Oosby at any time.
+                  If we make significant changes to these Terms, we'll give you reasonable notice.
+                </p>
+              </div>
+            </div>
+
+            <!-- Section 10 -->
+            <div class="mb-12">
+              <h2 class="text-3xl font-bold tracking-[-0.015em] text-oosby-plum mb-6 font-display-tight">
+                10. Disclaimer and limitation of liability
+              </h2>
+              <div class="space-y-4 text-oosby-text leading-relaxed">
+                <p>
+                  Oosby is provided "as is" and "as available."
+                  We make no warranties that the Service will meet your exact needs or be error-free.
+                </p>
+                <p>To the fullest extent permitted by law:</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                  <li>Oosby and Ridley Industries Ltd shall not be liable for any indirect, incidental, or consequential damages, or loss of data or profits.</li>
+                  <li>Our total liability to you will not exceed the amount you have paid to use the Service (if any) in the 12 months before the claim arose.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Section 11 -->
+            <div class="mb-12">
+              <h2 class="text-3xl font-bold tracking-[-0.015em] text-oosby-plum mb-6 font-display-tight">
+                11. Termination
+              </h2>
+              <div class="space-y-4 text-oosby-text leading-relaxed">
+                <p>
+                  You may close your account at any time via your settings.
+                  We may suspend or terminate your account if you breach these Terms or misuse the Service.
+                </p>
+                <p>
+                  After termination, your access to stored data may be limited. We recommend exporting any important information before closing your account.
+                </p>
+              </div>
+            </div>
+
+            <!-- Section 12 -->
+            <div class="mb-12">
+              <h2 class="text-3xl font-bold tracking-[-0.015em] text-oosby-plum mb-6 font-display-tight">
+                12. Governing law
+              </h2>
+              <div class="space-y-4 text-oosby-text leading-relaxed">
+                <p>
+                  These Terms are governed by the laws of <strong>England and Wales</strong>, and any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.
+                </p>
+              </div>
+            </div>
+
+            <!-- Section 13 -->
+            <div class="mb-12">
+              <h2 class="text-3xl font-bold tracking-[-0.015em] text-oosby-plum mb-6 font-display-tight">
+                13. Contact us
+              </h2>
+              <div class="space-y-4 text-oosby-text leading-relaxed">
+                <p>
+                  If you have questions about these Terms or Oosby's policies, please contact:<br>
+                  📧 <a href="mailto:support@oosby.com" class="text-oosby-pink-func hover:text-oosby-pink underline font-medium">support@oosby.com</a>
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section class="py-16 bg-oosby-gray">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl text-center">
+          <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+            Summary (for users)
+          </h2>
+          <div class="bg-oosby-plum/5 p-8 rounded-2xl border border-oosby-plum/10">
+            <p class="text-xl leading-relaxed text-oosby-text mb-6">
+              Oosby exists to make life admin easier, not to harvest data.
+              We protect your information, respect your choices, and operate transparently.
+            </p>
+            <p class="text-xl font-medium text-oosby-plum">
+              If something doesn't feel right — tell us. We'll fix it.
+            </p>
+          </div>
+          <div class="mt-8">
+            <Button
+              variant="oosby-primary"
+              size="lg"
+              href="https://app.oosby.com/register"
+              class="bg-oosby-plum hover:bg-oosby-plum/90 text-white"
+            >
+              Get started →
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer - Same as homepage -->
+    <footer class="bg-black py-8">
+      <div class="px-6 lg:px-16">
+        <!-- Logo and Columns -->
+        <div class="grid gap-8 md:grid-cols-4 lg:grid-cols-5">
+          <!-- Logo -->
+          <div>
+            <a href="/">
+              <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert mb-4" />
+            </a>
+            <p class="text-xs text-white/60 leading-relaxed max-w-48">
+              Oosby is your quietly clever<br />household companion.<br />Built for calm, designed for trust.
+            </p>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Company</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/about" class="text-xs text-white/90 transition hover:text-white">About</a>
+              </li>
+              <li>
+                <a href="/contact" class="text-xs text-white/90 transition hover:text-white">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Useful Links -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Useful Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/#solution" class="text-xs text-white/90 transition hover:text-white">Premium</a>
+              </li>
+              <li>
+                <a href="#" class="text-xs text-white/90 transition hover:text-white">Support</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Legal</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/privacy" class="text-xs text-white/90 transition hover:text-white">Privacy</a>
+              </li>
+              <li>
+                <a href="/terms" class="text-xs text-white/90 transition hover:text-white">Terms</a>
+              </li>
+              <li>
+                <a href="/trust" class="text-xs text-white/90 transition hover:text-white">Trust</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="mt-12 border-t border-white/10 pt-8">
+          <div class="flex justify-end">
+            <p class="text-xs text-white/60">
+              © Oosby 2025
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</Layout>
