@@ -1,0 +1,249 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+import '../styles/global.css';
+
+// Content from i18n - normally this would come from a CMS or content files
+const content = {
+  meta: {
+    title: 'Oosby - Life admin, sorted',
+    description: 'Oosby keeps track of the boring-but-important stuff - from dentist appointments to insurance renewals - automatically and just in time.'
+  },
+  hero: {
+    headline: 'Life admin, sorted.',
+    subhead: 'Oosby keeps track of the boring-but-important stuff - from dentist appointments to insurance renewals - automatically and just in time.',
+    cta: {
+      primary: 'Get started',
+      secondary: 'See how it works'
+    }
+  },
+  problem: {
+    heading: 'We all have that invisible mental to-do list.',
+    lines: {
+      line1: 'Renewals, bills, bookings...',
+      line2: 'They live across calendars, inboxes, and WhatsApp threads.',
+      line3: 'Oosby brings it all back together - calm, clear, and under control.'
+    }
+  },
+  solution: {
+    heading: 'How Oosby works',
+    steps: {
+      step1: {
+        title: 'Add a Thing.',
+        description: 'A car, a house, a contract - anything that matters.'
+      },
+      step2: {
+        title: 'Oosby remembers the rest.',
+        description: 'Dates, documents, renewals, reminders - all in one place.'
+      },
+      step3: {
+        title: 'You stay ahead.',
+        description: "We'll nudge you just in time - and leave you alone the rest of the time."
+      }
+    },
+    demoCard: {
+      title: 'Car',
+      subtitle: 'MOT due in 5 days'
+    }
+  }
+};
+---
+
+<Layout title={content.meta.title} description={content.meta.description}>
+  <!-- Landing Page - Oosby confident calm design -->
+  <div class="min-h-screen bg-oosby-bg">
+    <!-- Navigation Bar - Black -->
+    <header class="sticky top-0 z-50 h-16 border-b border-white/10 bg-black backdrop-blur-sm">
+      <nav class="flex h-full items-center justify-between px-6 lg:px-16">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert" />
+        </div>
+
+        <!-- Navigation Links & Actions -->
+        <div class="flex items-center gap-6">
+          <a
+            href="#solution"
+            class="hidden text-sm text-white/90 transition hover:text-white md:block"
+          >
+            Premium
+          </a>
+          <a href="#" class="hidden text-sm text-white/90 transition hover:text-white md:block">
+            Support
+          </a>
+          <Button
+            variant="outline"
+            size="sm"
+            href="https://app.oosby.com/register"
+            class="hidden border-white/20 bg-transparent text-white hover:bg-white/10 md:flex"
+          >
+            Sign Up
+          </Button>
+          <Button
+            variant="oosby-primary"
+            size="sm"
+            href="https://app.oosby.com/signin"
+            class="bg-oosby-pink-func hover:bg-oosby-pink"
+          >
+            Sign In
+          </Button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Section 1: Hero - Full-bleed image with overlay -->
+    <section class="relative overflow-hidden">
+      <!-- Background image - full bleed -->
+      <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style="background-image: url('/images/hero-bg.jpg')"
+      ></div>
+
+      <!-- Dark overlay for text contrast -->
+      <div class="absolute inset-0 bg-black/60"></div>
+
+      <!-- Content -->
+      <div class="relative px-6 py-16 lg:px-16 lg:py-24">
+        <div class="mx-auto max-w-4xl text-center">
+          <!-- H1 uses DM Serif Display - white for contrast -->
+          <h1 class="mb-6 text-5xl font-normal tracking-tight text-white lg:text-6xl">
+            {content.hero.headline}
+          </h1>
+
+          <!-- Subhead - white with slight transparency -->
+          <p
+            class="mx-auto mb-10 max-w-2xl text-xl font-medium leading-relaxed text-white/90 lg:text-2xl"
+          >
+            {content.hero.subhead}
+          </p>
+
+          <!-- CTA -->
+          <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Button
+              variant="oosby-primary"
+              size="lg"
+              href="https://app.oosby.com/register"
+              class="bg-oosby-pink-func hover:bg-oosby-pink"
+            >
+              {content.hero.cta.primary} →
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Problem - Pale pink with plum text -->
+    <section class="bg-gradient-to-br from-pink-50 to-pink-100 py-20">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-3xl text-center">
+          <!-- h2 uses Inter Tight (font-display-tight) - BOLD for visual weight -->
+          <h2 class="mb-6 text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl">
+            {content.problem.heading}
+          </h2>
+
+          <!-- Copy with breathing rhythm - tighter spacing -->
+          <div class="space-y-2 text-xl font-medium leading-snug text-oosby-plum/90 lg:text-2xl">
+            <p>{content.problem.lines.line1}</p>
+            <p>{content.problem.lines.line2}</p>
+            <p class="pt-4 text-2xl font-bold text-oosby-plum lg:text-3xl">
+              {content.problem.lines.line3}
+            </p>
+          </div>
+
+          <!-- CTA moved from hero -->
+          <div class="mt-8">
+            <Button
+              variant="oosby-primary"
+              size="lg"
+              href="#solution"
+              class="bg-oosby-plum text-white hover:bg-oosby-plum/90"
+            >
+              {content.hero.cta.secondary}
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Solution - Icons with Brand Colors -->
+    <section id="solution" class="py-28">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-5xl">
+          <h2
+            class="mb-20 text-center text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl"
+          >
+            {content.solution.heading}
+          </h2>
+
+          <!-- 3 Steps with Icons -->
+          <div class="mb-16 grid gap-16 md:grid-cols-3">
+            <!-- Step 1 - Plus Icon -->
+            <div class="text-center">
+              <div
+                class="mx-auto mb-8 flex h-20 w-20 items-center justify-center rounded-2xl bg-oosby-pink/10"
+              >
+                <!-- Plus icon via SVG -->
+                <svg class="h-10 w-10 text-oosby-pink-func" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+              </div>
+              <h3 class="mb-4 text-2xl font-bold text-oosby-plum">
+                {content.solution.steps.step1.title}
+              </h3>
+              <p class="text-lg leading-7 text-oosby-text">
+                {content.solution.steps.step1.description}
+              </p>
+            </div>
+
+            <!-- Step 2 - Sparkles Icon -->
+            <div class="text-center">
+              <div
+                class="mx-auto mb-8 flex h-20 w-20 items-center justify-center rounded-2xl bg-oosby-teal/10"
+              >
+                <!-- Sparkles icon via SVG -->
+                <svg class="h-10 w-10 text-oosby-teal-func" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z" />
+                </svg>
+              </div>
+              <h3 class="mb-4 text-2xl font-bold text-oosby-plum">
+                {content.solution.steps.step2.title}
+              </h3>
+              <p class="text-lg leading-7 text-oosby-text">
+                {content.solution.steps.step2.description}
+              </p>
+            </div>
+
+            <!-- Step 3 - BellRing Icon -->
+            <div class="text-center">
+              <div
+                class="mx-auto mb-8 flex h-20 w-20 items-center justify-center rounded-2xl bg-oosby-plum/10"
+              >
+                <!-- Bell icon via SVG -->
+                <svg class="h-10 w-10 text-oosby-plum" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                </svg>
+              </div>
+              <h3 class="mb-4 text-2xl font-bold text-oosby-plum">
+                {content.solution.steps.step3.title}
+              </h3>
+              <p class="text-lg leading-7 text-oosby-text">
+                {content.solution.steps.step3.description}
+              </p>
+            </div>
+          </div>
+
+          <!-- Demo Card -->
+          <div class="mx-auto max-w-md">
+            <Card class="border-gray-200 bg-white hover:bg-gray-50">
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-oosby-text mb-2">{content.solution.demoCard.title}</h3>
+                <p class="text-oosby-text/70">{content.solution.demoCard.subtitle}</p>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
