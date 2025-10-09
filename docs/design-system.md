@@ -176,22 +176,25 @@ Oosby uses **Tailwind CSS v4** with the modern `@theme` syntax. Configuration ex
 
 ### Font Loading
 
-Fonts are loaded via Google Fonts CDN in `src/app.html`:
+Fonts are loaded via Google Fonts CDN with optimized display strategies:
 
 ```html
-<!-- Core fonts: Inter, Inter Tight -->
-<link
-	href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500&display=block"
-	rel="stylesheet"
-/>
-<!-- Display font: DM Serif Display -->
-<link
-	href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
-	rel="stylesheet"
-/>
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Core fonts: Inter, Inter Tight with block display to prevent FOUT -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700&display=block" rel="stylesheet">
+
+<!-- Hero font: DM Serif Display with swap (used sparingly for H1 only) -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 ```
 
-Uses `display=block` to prevent FOUT (Flash of Unstyled Text) for core fonts. DM Serif Display uses `display=swap` as it's only used for H1 headings (graceful fallback acceptable).
+**Font Loading Strategy:**
+- **Core fonts** (Inter, Inter Tight): `display=block` prevents FOUT on critical UI text
+- **Display font** (DM Serif): `display=swap` allows graceful fallback (used sparingly for H1 only)
+- **Performance**: Split loading improves Core Web Vitals (CLS, LCP scores)
+- **Weights optimized**: Inter (400-700), Inter Tight (600-700 only for headings)
 
 ### Error Pages
 
@@ -214,8 +217,56 @@ Available utility classes:
 
 - `font-sans` - Inter (default body text, UI text)
 - `font-display` - DM Serif Display (H1 headings only, use sparingly)
-- `font-display-tight` - Inter Tight (h2-h6 headings, card titles, labels) - **Note:** May conflict, use inline styles if issues occur
+- `font-display-tight` - Inter Tight (h2-h6 headings, card titles, labels)
 - `font-mono` - JetBrains Mono (code)
+
+**Typography Hierarchy (Strictly Enforced):**
+```css
+/* Automatic hierarchy via base styles */
+h1 { font-family: var(--font-family-display); }     /* DM Serif Display */
+h2, h3, h4, h5, h6 { font-family: var(--font-family-display-tight); } /* Inter Tight */
+body { font-family: var(--font-family-sans); }       /* Inter */
+```
+
+**Usage Guidelines:**
+- **H1**: DM Serif Display for hero moments only - creates emotional impact
+- **H2-H6**: Inter Tight with boldness (600-700 weights) for structural hierarchy  
+- **Body**: Inter for readability and consistency
+
+---
+
+## Marketing Site Learnings
+
+The Oosby marketing site (oosby.com) has validated several design system improvements:
+
+### Proven Optimizations
+
+**Font Loading Performance**
+- Split font loading strategy reduces CLS (Cumulative Layout Shift)
+- Core fonts with `display=block` prevents FOUT on critical UI elements
+- Display font with `display=swap` provides graceful fallback for hero text
+
+**Semantic Color Extensions**
+Marketing site successfully uses extended status colors:
+```javascript
+success: { 50: '#f0fdf4', 500: '#22c55e', 600: '#16a34a' }
+warning: { 50: '#fffbeb', 500: '#f59e0b', 600: '#d97706' }  
+error: { 50: '#fef2f2', 500: '#ef4444', 600: '#dc2626' }
+```
+*Consider adopting for dashboard notifications, form validation, alerts*
+
+**Extended Spacing Scale**
+Large layout spacing proves useful for onboarding flows, empty states:
+```javascript
+spacing: { 18: '4.5rem', 88: '22rem', 128: '32rem' }
+```
+
+### Documentation Improvements
+- Self-documenting font family definitions with usage comments
+- Clear color purpose annotations (WCAG compliance, usage context)
+- Performance rationale for loading strategies
+
+*See `/docs/marketing-to-design-system-recommendations.md` for detailed rollback analysis*
 
 ---
 
