@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout title="404 - Page not found" description="The page you're looking for doesn't exist.">
+  <div class="flex min-h-screen items-center justify-center bg-gradient-to-br from-oosby-bg to-oosby-gray p-4">
+    <div class="w-full max-w-2xl text-center">
+      <!-- Logo -->
+      <div class="mb-8 flex justify-center">
+        <a href="/">
+          <img src="/logo.svg" alt="Oosby" class="h-8 w-auto" />
+        </a>
+      </div>
+
+      <!-- Status code -->
+      <div 
+        class="mb-4 font-black leading-none tracking-tighter text-oosby-text/20"
+        style="font-family: 'Inter Tight', Inter, system-ui, sans-serif; font-size: 12rem;"
+      >
+        404
+      </div>
+
+      <!-- Error title -->
+      <h1 class="mb-4 font-display text-3xl font-bold text-oosby-plum">
+        Page not found
+      </h1>
+
+      <!-- Error message -->
+      <p class="mb-8 text-lg text-oosby-text">
+        Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or you might have typed the wrong address.
+      </p>
+
+      <!-- Actions -->
+      <div class="flex flex-col gap-3 sm:flex-row sm:justify-center">
+        <Button 
+          href="/" 
+          variant="oosby-primary" 
+          size="lg"
+          class="bg-oosby-plum hover:bg-oosby-plum/90 text-white"
+        >
+          Go home
+        </Button>
+        <Button 
+          href="https://app.oosby.com/signin" 
+          variant="outline" 
+          size="lg"
+          class="border-oosby-plum text-oosby-plum hover:bg-oosby-plum hover:text-white"
+        >
+          Sign in to app
+        </Button>
+      </div>
+
+      <!-- Support link -->
+      <p class="mt-8 text-sm text-oosby-text-muted">
+        Still having trouble? 
+        <a href="/support" class="text-oosby-pink-func hover:text-oosby-pink underline">Get help</a>
+        or contact us at 
+        <a href="mailto:support@oosby.com" class="text-oosby-pink-func hover:text-oosby-pink underline">support@oosby.com</a>
+      </p>
+    </div>
+  </div>
+</Layout>

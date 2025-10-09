@@ -21,7 +21,7 @@ import Card from '../components/Card.astro';
           <a href="/#solution" class="hidden text-sm text-white/90 transition hover:text-white md:block">
             Premium
           </a>
-          <a href="#" class="hidden text-sm text-white/90 transition hover:text-white md:block">
+          <a href="/support" class="hidden text-sm text-white/90 transition hover:text-white md:block">
             Support
           </a>
           <Button
@@ -120,6 +120,212 @@ import Card from '../components/Card.astro';
               </p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How Oosby Handles Offers - Detailed Explainer -->
+    <section class="py-20 bg-oosby-gray">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-5xl">
+          <header class="text-center mb-12">
+            <p class="inline-block text-xs tracking-widest uppercase text-oosby-text-muted mb-3">How Oosby handles offers</p>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight">
+              Helpful when you need them. Invisible when you don't.
+            </h2>
+            <p class="mt-6 text-xl text-oosby-text max-w-3xl mx-auto">
+              We bring <em class="text-oosby-plum">you</em> to the offer — never the offer to you. Timing over targeting. Consent over tracking. Calm over clutter.
+            </p>
+          </header>
+
+          <!-- Stepper -->
+          <div class="grid md:grid-cols-5 gap-6 mb-12">
+            <!-- Step 1 -->
+            <Card class="border-oosby-border bg-oosby-bg p-6">
+              <div class="flex items-center justify-between mb-4">
+                <span class="flex h-8 w-8 items-center justify-center rounded-full bg-oosby-plum/10 text-oosby-plum font-semibold text-sm">1</span>
+                <svg class="h-5 w-5 text-oosby-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12,6 12,12 16,14"/>
+                </svg>
+              </div>
+              <h3 class="font-semibold text-oosby-plum leading-snug mb-2">Right time, not all the time</h3>
+              <p class="text-sm text-oosby-text-muted leading-relaxed">Oosby notices when a renewal or key date is coming up (like car insurance or MOT).</p>
+            </Card>
+
+            <!-- Step 2 -->
+            <Card class="border-oosby-border bg-oosby-bg p-6">
+              <div class="flex items-center justify-between mb-4">
+                <span class="flex h-8 w-8 items-center justify-center rounded-full bg-oosby-plum/10 text-oosby-plum font-semibold text-sm">2</span>
+                <svg class="h-5 w-5 text-oosby-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="m9 12 2 2 4-4"/>
+                  <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                  <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                  <path d="M12 3c0 1 1 3 3 3s3-2 3-3-1-3-3-3-3 2-3 3"/>
+                  <path d="M12 21c0-1-1-3-3-3s-3 2-3 3 1 3 3 3 3-2 3-3"/>
+                </svg>
+              </div>
+              <h3 class="font-semibold text-oosby-plum leading-snug mb-2">Private check, on your device</h3>
+              <p class="text-sm text-oosby-text-muted leading-relaxed">We match the timing to potential partner offers without sending your personal data anywhere.</p>
+            </Card>
+
+            <!-- Step 3 -->
+            <Card class="border-oosby-border bg-oosby-bg p-6">
+              <div class="flex items-center justify-between mb-4">
+                <span class="flex h-8 w-8 items-center justify-center rounded-full bg-oosby-plum/10 text-oosby-plum font-semibold text-sm">3</span>
+                <svg class="h-5 w-5 text-oosby-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </div>
+              <h3 class="font-semibold text-oosby-plum leading-snug mb-2">You choose to see offers</h3>
+              <p class="text-sm text-oosby-text-muted leading-relaxed">A small prompt appears. You can open it, snooze it, or dismiss it. No pop‑ups, no distractions.</p>
+            </Card>
+
+            <!-- Step 4 -->
+            <Card class="border-oosby-border bg-oosby-bg p-6">
+              <div class="flex items-center justify-between mb-4">
+                <span class="flex h-8 w-8 items-center justify-center rounded-full bg-oosby-plum/10 text-oosby-plum font-semibold text-sm">4</span>
+                <svg class="h-5 w-5 text-oosby-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/>
+                  <path d="M14 10V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/>
+                  <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v4.5"/>
+                  <path d="M18 11c.5-1 .5-2 0-3"/>
+                  <path d="M6 10.5c-.5-1-.5-2 0-3"/>
+                  <path d="M12 17c5 0 8-2.5 8-5v-4a8 8 0 1 0-16 0v4c0 2.5 3 5 8 5Z"/>
+                </svg>
+              </div>
+              <h3 class="font-semibold text-oosby-plum leading-snug mb-2">You stay in control</h3>
+              <p class="text-sm text-oosby-text-muted leading-relaxed">Only if you tap to view do we fetch details. Until then, nothing is shared with partners.</p>
+            </Card>
+
+            <!-- Step 5 -->
+            <Card class="border-oosby-border bg-oosby-bg p-6">
+              <div class="flex items-center justify-between mb-4">
+                <span class="flex h-8 w-8 items-center justify-center rounded-full bg-oosby-plum/10 text-oosby-plum font-semibold text-sm">5</span>
+                <svg class="h-5 w-5 text-oosby-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+                </svg>
+              </div>
+              <h3 class="font-semibold text-oosby-plum leading-snug mb-2">Click‑through = your choice</h3>
+              <p class="text-sm text-oosby-text-muted leading-relaxed">If you decide to proceed, you visit the partner. At that point, you share details directly with them — not through us.</p>
+            </Card>
+          </div>
+
+          <!-- Data flow card - Hidden on mobile -->
+          <Card class="border-oosby-border bg-oosby-bg p-8 mb-12 hidden md:block">
+            <h4 class="text-xl font-semibold text-oosby-plum mb-6">Data flow at a glance</h4>
+            <div class="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-6 text-sm">
+              <div class="flex items-center gap-3 text-oosby-text">
+                <svg class="h-5 w-5 text-oosby-teal-func flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                  <circle cx="12" cy="16" r="1"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+                <span class="font-medium">Oosby (your encrypted data)</span>
+              </div>
+              <svg class="hidden lg:block h-5 w-5 text-oosby-text-muted flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+              <div class="flex items-center gap-3 text-oosby-text">
+                <svg class="h-5 w-5 text-oosby-pink-func flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+                <span class="font-medium">Prompt (you choose to view or snooze)</span>
+              </div>
+              <svg class="hidden lg:block h-5 w-5 text-oosby-text-muted flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+              <div class="flex items-center gap-3 text-oosby-text">
+                <svg class="h-5 w-5 text-oosby-teal-func flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+                </svg>
+                <span class="font-medium">Offers (fetched only after you opt‑in)</span>
+              </div>
+              <svg class="hidden lg:block h-5 w-5 text-oosby-text-muted flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+              <div class="flex items-center gap-3 text-oosby-text">
+                <svg class="h-5 w-5 text-oosby-plum flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 12l2 2 4-4"/>
+                  <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                  <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                  <path d="M12 3c0 1 1 3 3 3s3-2 3-3-1-3-3-3-3 2-3 3"/>
+                  <path d="M12 21c0-1-1-3-3-3s-3 2-3 3 1 3 3 3 3-2 3-3"/>
+                </svg>
+                <span class="font-medium">Partner site (your direct choice & control)</span>
+              </div>
+            </div>
+            <p class="mt-4 text-xs text-oosby-text-muted leading-relaxed">
+              Until you choose to view offers, no personal data leaves Oosby. If you click through, you interact directly with the partner under their policy.
+            </p>
+          </Card>
+
+          <!-- Never / Always columns -->
+          <div class="grid md:grid-cols-2 gap-8">
+            <Card class="border-oosby-border bg-oosby-bg p-8">
+              <div class="flex items-center gap-3 mb-6">
+                <svg class="h-6 w-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m15 9-6 6"/>
+                  <path d="m9 9 6 6"/>
+                </svg>
+                <h4 class="text-xl font-bold text-oosby-plum">What we never do</h4>
+              </div>
+              <ul class="space-y-3 text-oosby-text">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 h-2 w-2 rounded-full bg-red-500 flex-shrink-0"></span>
+                  <span>No personal profiles sold or traded</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 h-2 w-2 rounded-full bg-red-500 flex-shrink-0"></span>
+                  <span>No cross‑app or cross‑site tracking</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 h-2 w-2 rounded-full bg-red-500 flex-shrink-0"></span>
+                  <span>No always‑on ad slots or attention hijacks</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 h-2 w-2 rounded-full bg-red-500 flex-shrink-0"></span>
+                  <span>No sharing of your 'things' (cars, home, bills) with advertisers</span>
+                </li>
+              </ul>
+            </Card>
+
+            <Card class="border-oosby-border bg-oosby-bg p-8">
+              <div class="flex items-center gap-3 mb-6">
+                <svg class="h-6 w-6 text-oosby-teal-func" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 12l2 2 4-4"/>
+                  <circle cx="12" cy="12" r="10"/>
+                </svg>
+                <h4 class="text-xl font-bold text-oosby-plum">What we always do</h4>
+              </div>
+              <ul class="space-y-3 text-oosby-text">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 h-2 w-2 rounded-full bg-oosby-teal-func flex-shrink-0"></span>
+                  <span>You decide when to see offers</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 h-2 w-2 rounded-full bg-oosby-teal-func flex-shrink-0"></span>
+                  <span>Your data stays encrypted at rest and in transit</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 h-2 w-2 rounded-full bg-oosby-teal-func flex-shrink-0"></span>
+                  <span>Passkey / Apple / Google sign‑in only — no passwords to steal</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 h-2 w-2 rounded-full bg-oosby-teal-func flex-shrink-0"></span>
+                  <span>Clear controls: view, snooze, or dismiss any prompt</span>
+                </li>
+              </ul>
+            </Card>
+          </div>
+
+          <!-- Footnote -->
+          <p class="mt-8 text-xs text-oosby-text-muted text-center leading-relaxed max-w-4xl mx-auto">
+            Partners are vetted for clarity and value. Viewing an offer is optional; clicking through means you're visiting the partner under their terms and privacy policy.
+          </p>
         </div>
       </div>
     </section>
@@ -320,7 +526,7 @@ import Card from '../components/Card.astro';
                 <a href="/#solution" class="text-xs text-white/90 transition hover:text-white">Premium</a>
               </li>
               <li>
-                <a href="#" class="text-xs text-white/90 transition hover:text-white">Support</a>
+                <a href="/support" class="text-xs text-white/90 transition hover:text-white">Support</a>
               </li>
             </ul>
           </div>

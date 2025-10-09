@@ -1,0 +1,396 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Cookie Policy - Oosby" description="Oosby's approach to cookies and tracking. Spoiler: we use hardly any, and we don't track you around the web.">
+  <div class="min-h-screen bg-oosby-bg">
+    <!-- Navigation Bar - Black -->
+    <header class="sticky top-0 z-50 h-16 border-b border-white/10 bg-black backdrop-blur-sm">
+      <nav class="flex h-full items-center justify-between px-6 lg:px-16">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <a href="/">
+            <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert" />
+          </a>
+        </div>
+
+        <!-- Navigation Links & Actions -->
+        <div class="flex items-center gap-6">
+          <a href="/premium" class="hidden text-sm text-white/90 transition hover:text-white md:block">
+            Premium
+          </a>
+          <a href="/support" class="hidden text-sm text-white/90 transition hover:text-white md:block">
+            Support
+          </a>
+          <Button
+            variant="outline"
+            size="sm"
+            href="https://app.oosby.com/register"
+            class="hidden border-white/20 bg-transparent text-white hover:bg-white/10 md:flex"
+          >
+            Sign Up
+          </Button>
+          <Button
+            variant="oosby-primary"
+            size="sm"
+            href="https://app.oosby.com/signin"
+            class="bg-oosby-pink-func hover:bg-oosby-pink"
+          >
+            Sign In
+          </Button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 lg:py-28">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl text-center">
+          <h1 class="mb-6 text-5xl font-normal tracking-tight text-oosby-plum lg:text-6xl font-display">
+            Cookie Policy
+          </h1>
+          <p class="mx-auto mb-10 max-w-2xl text-2xl font-medium leading-relaxed text-oosby-text lg:text-3xl">
+            We use hardly any cookies, and we don't track you.
+          </p>
+          <p class="mx-auto max-w-3xl text-xl leading-relaxed text-oosby-text-muted">
+            This policy explains our minimal use of cookies and similar technologies on the Oosby website.
+          </p>
+          <p class="mt-6 text-sm text-oosby-text-muted">
+            Last updated: 9 October 2025 | Effective: 9 October 2025
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Simple Answer -->
+    <section class="py-16 bg-oosby-gray">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl">
+          <Card class="border-oosby-teal/20 bg-oosby-teal/5 p-8">
+            <h2 class="mb-6 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+              🍪 The Simple Answer
+            </h2>
+            <div class="space-y-4 text-lg text-oosby-text">
+              <p><strong class="text-oosby-plum">Oosby doesn't use tracking cookies.</strong> We don't follow you around the web, build advertising profiles, or share your browsing data with third parties.</p>
+              <p><strong class="text-oosby-plum">We only use essential cookies</strong> that are necessary to make the website work properly - like remembering your preferences and keeping you signed in securely.</p>
+              <p><strong class="text-oosby-plum">No analytics cookies</strong> are used on this website. We don't track page views, clicks, or user behavior for marketing purposes.</p>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl space-y-16">
+
+          <!-- What Are Cookies -->
+          <section>
+            <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+              What are cookies?
+            </h2>
+            
+            <div class="space-y-6 text-lg leading-relaxed text-oosby-text">
+              <p>
+                Cookies are small text files that websites store on your device when you visit them. They help websites remember information about your visit, like your preferences or login status.
+              </p>
+              
+              <p>
+                Most websites use cookies extensively to track users, build profiles, and serve targeted advertising. <strong class="text-oosby-plum">Oosby takes a different approach.</strong>
+              </p>
+            </div>
+          </section>
+
+          <!-- What Oosby Uses -->
+          <section>
+            <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+              What Oosby uses (and doesn't use)
+            </h2>
+
+            <div class="grid gap-8 md:grid-cols-2">
+              <!-- Essential Only -->
+              <Card class="border-oosby-border bg-oosby-surface-2 p-6">
+                <h3 class="mb-4 text-xl font-semibold text-oosby-plum">✅ Essential Cookies Only</h3>
+                <div class="space-y-3 text-oosby-text">
+                  <p class="font-medium">We use minimal essential cookies for:</p>
+                  <ul class="ml-4 space-y-2 text-sm">
+                    <li>• Keeping you signed in securely</li>
+                    <li>• Remembering your preferences (like language)</li>
+                    <li>• Security and fraud prevention</li>
+                    <li>• Basic functionality of the website</li>
+                  </ul>
+                  <p class="text-sm text-oosby-text-muted mt-4">
+                    These are necessary for the website to work and are not used for tracking.
+                  </p>
+                </div>
+              </Card>
+
+              <!-- What We Don't Use -->
+              <Card class="border-oosby-border bg-oosby-surface-2 p-6">
+                <h3 class="mb-4 text-xl font-semibold text-oosby-plum">❌ What We Don't Use</h3>
+                <div class="space-y-3 text-oosby-text">
+                  <p class="font-medium">Oosby does NOT use:</p>
+                  <ul class="ml-4 space-y-2 text-sm">
+                    <li>• Analytics cookies (Google Analytics, etc.)</li>
+                    <li>• Marketing or advertising cookies</li>
+                    <li>• Social media tracking pixels</li>
+                    <li>• Third-party tracking scripts</li>
+                    <li>• Cross-site tracking cookies</li>
+                  </ul>
+                  <p class="text-sm text-oosby-text-muted mt-4">
+                    We believe privacy shouldn't be a premium feature.
+                  </p>
+                </div>
+              </Card>
+            </div>
+          </section>
+
+          <!-- Cookie Details -->
+          <section>
+            <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+              Cookie details
+            </h2>
+            
+            <div class="bg-oosby-gray p-8 rounded-xl">
+              <h3 class="mb-6 text-xl font-semibold text-oosby-plum">Current cookies used by Oosby:</h3>
+              
+              <div class="overflow-x-auto">
+                <table class="w-full">
+                  <thead>
+                    <tr class="border-b border-oosby-border">
+                      <th class="text-left py-4 pr-8 text-sm font-semibold text-oosby-plum">Cookie Name</th>
+                      <th class="text-left py-4 pr-8 text-sm font-semibold text-oosby-plum">Purpose</th>
+                      <th class="text-left py-4 pr-8 text-sm font-semibold text-oosby-plum">Duration</th>
+                      <th class="text-left py-4 text-sm font-semibold text-oosby-plum">Type</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-oosby-border/50">
+                    <tr>
+                      <td class="py-4 pr-8 text-sm font-medium text-oosby-text">oosby-session</td>
+                      <td class="py-4 pr-8 text-sm text-oosby-text">Keeps you signed in securely</td>
+                      <td class="py-4 pr-8 text-sm text-oosby-text">Session</td>
+                      <td class="py-4 text-sm text-oosby-text">Essential</td>
+                    </tr>
+                    <tr class="bg-oosby-bg/50">
+                      <td class="py-4 pr-8 text-sm font-medium text-oosby-text">oosby-prefs</td>
+                      <td class="py-4 pr-8 text-sm text-oosby-text">Remembers your preferences</td>
+                      <td class="py-4 pr-8 text-sm text-oosby-text">30 days</td>
+                      <td class="py-4 text-sm text-oosby-text">Functional</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+              <p class="mt-6 text-sm text-oosby-text-muted">
+                <strong>Note:</strong> This list may be updated if we add essential functionality that requires additional cookies. We'll always update this page to reflect any changes.
+              </p>
+            </div>
+          </section>
+
+          <!-- Third Party Services -->
+          <section>
+            <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+              Third-party services
+            </h2>
+            
+            <div class="space-y-6">
+              <p class="text-lg text-oosby-text">
+                Oosby website currently uses minimal third-party services:
+              </p>
+              
+              <div class="grid gap-6 md:grid-cols-2">
+                <Card class="border-oosby-border bg-oosby-surface-2 p-6">
+                  <h3 class="mb-3 text-lg font-semibold text-oosby-plum">Google Fonts</h3>
+                  <p class="text-oosby-text mb-3">
+                    We load fonts from Google Fonts for consistent typography across devices.
+                  </p>
+                  <p class="text-sm text-oosby-text-muted">
+                    This may create minimal logging on Google's side, but no personal data is shared.
+                  </p>
+                </Card>
+                
+                <Card class="border-oosby-border bg-oosby-surface-2 p-6">
+                  <h3 class="mb-3 text-lg font-semibold text-oosby-plum">Cloudflare</h3>
+                  <p class="text-oosby-text mb-3">
+                    Our website is delivered through Cloudflare for security and performance.
+                  </p>
+                  <p class="text-sm text-oosby-text-muted">
+                    Cloudflare may set security-related cookies, but these are not used for tracking.
+                  </p>
+                </Card>
+              </div>
+            </div>
+          </section>
+
+          <!-- Your Choices -->
+          <section>
+            <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+              Your choices
+            </h2>
+            
+            <div class="space-y-6">
+              <p class="text-lg text-oosby-text">
+                Because we use so few cookies, and none for tracking, you have simple choices:
+              </p>
+              
+              <div class="space-y-4">
+                <Card class="border-oosby-border bg-oosby-surface-2 p-6">
+                  <h3 class="mb-3 text-lg font-semibold text-oosby-plum">🌐 Browser Settings</h3>
+                  <p class="text-oosby-text mb-3">
+                    You can disable cookies entirely in your browser settings, but this may affect the functionality of websites (including Oosby).
+                  </p>
+                  <p class="text-sm text-oosby-text-muted">
+                    Most browsers allow you to block third-party cookies while allowing essential first-party cookies.
+                  </p>
+                </Card>
+
+                <Card class="border-oosby-border bg-oosby-surface-2 p-6">
+                  <h3 class="mb-3 text-lg font-semibold text-oosby-plum">🔒 Incognito/Private Mode</h3>
+                  <p class="text-oosby-text mb-3">
+                    Using private browsing will prevent most cookies from being stored permanently.
+                  </p>
+                  <p class="text-sm text-oosby-text-muted">
+                    However, you'll need to sign in again each time you visit.
+                  </p>
+                </Card>
+              </div>
+            </div>
+          </section>
+
+          <!-- Future Changes -->
+          <section>
+            <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+              Future changes
+            </h2>
+            
+            <div class="bg-oosby-plum/5 p-8 rounded-xl border border-oosby-plum/20">
+              <h3 class="mb-4 text-xl font-semibold text-oosby-plum">Our commitment</h3>
+              <div class="space-y-4 text-oosby-text">
+                <p>
+                  We're committed to keeping our use of cookies minimal and transparent. If we ever need to use additional cookies, we will:
+                </p>
+                <ul class="ml-6 space-y-2">
+                  <li>• Update this policy to clearly explain what's changed</li>
+                  <li>• Only use cookies that serve a genuine functional purpose</li>
+                  <li>• Never use cookies for advertising or behavioral tracking</li>
+                  <li>• Give you clear control over any non-essential cookies</li>
+                </ul>
+                <p class="mt-6 font-medium text-oosby-plum">
+                  Privacy isn't a feature we plan to compromise on.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Contact -->
+          <section>
+            <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+              Questions?
+            </h2>
+            
+            <p class="mb-6 text-lg text-oosby-text">
+              If you have any questions about our use of cookies, please get in touch:
+            </p>
+
+            <Card class="border-oosby-border bg-oosby-surface-2 p-6">
+              <div class="text-center">
+                <p class="text-oosby-text mb-2">
+                  <a href="mailto:privacy@oosby.com" class="text-oosby-pink-func hover:text-oosby-pink underline font-medium">
+                    privacy@oosby.com
+                  </a>
+                </p>
+                <p class="text-sm text-oosby-text-muted">We'll respond within one working day.</p>
+              </div>
+            </Card>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8">
+      <div class="px-6 lg:px-16">
+        <div class="grid gap-8 md:grid-cols-4 lg:grid-cols-5">
+          <!-- Logo -->
+          <div>
+            <a href="/">
+              <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert mb-4" />
+            </a>
+            <p class="text-xs text-white/60 leading-relaxed max-w-48">
+              Oosby is your quietly clever<br />household companion.<br />Built for calm, designed for trust.
+            </p>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Company</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/about" class="text-xs text-white/90 transition hover:text-white">About</a>
+              </li>
+              <li>
+                <a href="/contact" class="text-xs text-white/90 transition hover:text-white">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Useful Links -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Useful Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/premium" class="text-xs text-white/90 transition hover:text-white">Premium</a>
+              </li>
+              <li>
+                <a href="/support" class="text-xs text-white/90 transition hover:text-white">Support</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Legal</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/trust" class="text-xs text-white/90 transition hover:text-white">Trust</a>
+              </li>
+              <li>
+                <a href="/privacy" class="text-xs text-white/90 transition hover:text-white">Privacy</a>
+              </li>
+              <li>
+                <a href="/cookies" class="text-xs text-white transition hover:text-white">Cookies</a>
+              </li>
+              <li>
+                <a href="/terms" class="text-xs text-white/90 transition hover:text-white">Terms</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- App Links -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Get Oosby</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="https://app.oosby.com/signin" class="text-xs text-white/90 transition hover:text-white">Sign In</a>
+              </li>
+              <li>
+                <a href="https://app.oosby.com/register" class="text-xs text-white/90 transition hover:text-white">Sign Up</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="mt-8 border-t border-white/10 pt-4">
+          <p class="text-center text-xs text-white/50">
+            © Oosby 2025. Built with care in the UK.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</Layout>

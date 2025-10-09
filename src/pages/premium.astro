@@ -1,0 +1,470 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Oosby Premium - Privacy that pays its way" description="Oosby Premium: unlimited households, shared access, and premium features. Privacy that pays its way - no data sold, no tracking, just better-timed help.">
+  <div class="min-h-screen bg-oosby-bg">
+    <!-- Navigation Bar - Black -->
+    <header class="sticky top-0 z-50 h-16 border-b border-white/10 bg-black backdrop-blur-sm">
+      <nav class="flex h-full items-center justify-between px-6 lg:px-16">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <a href="/">
+            <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert" />
+          </a>
+        </div>
+
+        <!-- Navigation Links & Actions -->
+        <div class="flex items-center gap-6">
+          <a href="/premium" class="hidden text-sm text-white transition hover:text-white md:block">
+            Premium
+          </a>
+          <a href="/support" class="hidden text-sm text-white/90 transition hover:text-white md:block">
+            Support
+          </a>
+          <Button
+            variant="outline"
+            size="sm"
+            href="https://app.oosby.com/register"
+            class="hidden border-white/20 bg-transparent text-white hover:bg-white/10 md:flex"
+          >
+            Sign Up
+          </Button>
+          <Button
+            variant="oosby-primary"
+            size="sm"
+            href="https://app.oosby.com/signin"
+            class="bg-oosby-pink-func hover:bg-oosby-pink"
+          >
+            Sign In
+          </Button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 lg:py-28">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl text-center">
+          <h1 class="mb-6 text-5xl font-normal tracking-tight text-oosby-plum lg:text-6xl font-display">
+            Oosby Premium
+          </h1>
+          <p class="mx-auto mb-10 max-w-2xl text-2xl font-medium leading-relaxed text-oosby-text lg:text-3xl">
+            Privacy that pays its way.
+          </p>
+          <p class="mx-auto max-w-4xl text-xl leading-relaxed text-oosby-text-muted">
+            Oosby remembers what matters — your renewals, your reminders, your responsibilities — and helps you stay one step ahead.<br />
+            When you're ready to unlock more households, more things, and shared access, Oosby Premium keeps everything calm, private, and under your control.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Premium Exists -->
+    <section class="py-20 bg-oosby-gray">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl">
+          <h2 class="mb-12 text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight text-center">
+            Why Premium exists
+          </h2>
+          
+          <div class="space-y-8 text-lg leading-relaxed text-oosby-text">
+            <p class="text-center">
+              Oosby's goal isn't to sell your attention — it's to <strong class="text-oosby-plum">save it</strong>.
+              We still show offers, but only when they're genuinely useful: relevant, timely, and entirely on your terms.
+            </p>
+            
+            <div class="bg-oosby-bg p-8 rounded-2xl border border-oosby-border">
+              <p class="mb-6">
+                When your car insurance, broadband, or appliance warranty is due, Oosby quietly checks for good deals.
+                If you choose to see them, we'll show a small selection from trusted partners.
+                You stay in control — and your data stays private.
+              </p>
+              
+              <div class="bg-oosby-plum/5 p-6 rounded-xl border border-oosby-plum/10">
+                <p class="text-xl font-medium text-oosby-plum mb-3">
+                  Oosby Premium exists so that we can keep that promise:
+                </p>
+                <p class="font-medium">
+                  no data sold, no noisy ads, no tracking — just better-timed help.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Comparison Table -->
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-6xl">
+          <h2 class="mb-16 text-center text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight">
+            What you get with Premium
+          </h2>
+
+          <Card class="border-oosby-border bg-oosby-surface-2 overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="border-b border-oosby-border bg-oosby-gray">
+                    <th class="text-left py-6 px-8 text-xl font-bold text-oosby-plum">Feature</th>
+                    <th class="text-center py-6 px-8 text-xl font-bold text-oosby-text">Free</th>
+                    <th class="text-center py-6 px-8 text-xl font-bold text-oosby-pink-func">Premium</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-oosby-border">
+                  <tr>
+                    <td class="py-6 px-8 font-medium text-oosby-text">Households</td>
+                    <td class="py-6 px-8 text-center text-oosby-text">1</td>
+                    <td class="py-6 px-8 text-center text-oosby-pink-func font-medium">Unlimited</td>
+                  </tr>
+                  <tr class="bg-oosby-gray/30">
+                    <td class="py-6 px-8 font-medium text-oosby-text">Vehicles</td>
+                    <td class="py-6 px-8 text-center text-oosby-text">1</td>
+                    <td class="py-6 px-8 text-center text-oosby-pink-func font-medium">Unlimited</td>
+                  </tr>
+                  <tr>
+                    <td class="py-6 px-8 font-medium text-oosby-text">Appliances & Utilities</td>
+                    <td class="py-6 px-8 text-center text-oosby-text">Limited</td>
+                    <td class="py-6 px-8 text-center text-oosby-pink-func font-medium">Unlimited</td>
+                  </tr>
+                  <tr class="bg-oosby-gray/30">
+                    <td class="py-6 px-8 font-medium text-oosby-text">Pets & Family Records</td>
+                    <td class="py-6 px-8 text-center text-oosby-text">Limited</td>
+                    <td class="py-6 px-8 text-center text-oosby-pink-func font-medium">Unlimited</td>
+                  </tr>
+                  <tr>
+                    <td class="py-6 px-8 font-medium text-oosby-text">Shared Access</td>
+                    <td class="py-6 px-8 text-center text-oosby-text-muted">—</td>
+                    <td class="py-6 px-8 text-center text-oosby-teal-func font-medium">✅ Invite family, housemates or carers</td>
+                  </tr>
+                  <tr class="bg-oosby-gray/30">
+                    <td class="py-6 px-8 font-medium text-oosby-text">Smart Reminders</td>
+                    <td class="py-6 px-8 text-center text-oosby-teal-func">✅</td>
+                    <td class="py-6 px-8 text-center text-oosby-teal-func font-medium">✅ Advanced control & scheduling</td>
+                  </tr>
+                  <tr>
+                    <td class="py-6 px-8 font-medium text-oosby-text">Curated Offers</td>
+                    <td class="py-6 px-8 text-center text-oosby-text">Optional</td>
+                    <td class="py-6 px-8 text-center text-oosby-pink-func font-medium">Optional, with more partner access</td>
+                  </tr>
+                  <tr class="bg-oosby-gray/30">
+                    <td class="py-6 px-8 font-medium text-oosby-text">Privacy</td>
+                    <td class="py-6 px-8 text-center text-oosby-teal-func">Strong baseline</td>
+                    <td class="py-6 px-8 text-center text-oosby-teal-func font-medium">Full control & enhanced security</td>
+                  </tr>
+                  <tr>
+                    <td class="py-6 px-8 font-medium text-oosby-text">Support</td>
+                    <td class="py-6 px-8 text-center text-oosby-text">Email support</td>
+                    <td class="py-6 px-8 text-center text-oosby-pink-func font-medium">Priority support & early features</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thoughtful Offers -->
+    <section class="py-20 bg-oosby-gray">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl">
+          <h2 class="mb-12 text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight text-center">
+            Thoughtful offers, not adverts
+          </h2>
+          
+          <div class="space-y-8 text-lg leading-relaxed text-oosby-text">
+            <p class="text-center">
+              Most apps bombard you with ads chosen by algorithms that know more about you than they should.<br />
+              <strong class="text-oosby-plum">Oosby takes the opposite approach.</strong>
+            </p>
+            
+            <p class="text-center text-xl">
+              We believe <strong class="text-oosby-plum">offers can be helpful</strong> — when they arrive at the right time, for the right reason.
+            </p>
+
+            <div class="bg-oosby-bg p-8 rounded-2xl border border-oosby-border">
+              <p class="text-xl font-medium text-oosby-plum mb-6">That's why Oosby's offers are:</p>
+              <div class="grid gap-6 md:grid-cols-2">
+                <div class="flex items-start gap-4">
+                  <div class="w-3 h-3 bg-oosby-pink-func rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p class="font-medium text-oosby-plum mb-2">Contextual</p>
+                    <p class="text-oosby-text">shown only when they're relevant (like before your MOT or renewal date).</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-3 h-3 bg-oosby-teal-func rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p class="font-medium text-oosby-plum mb-2">Private</p>
+                    <p class="text-oosby-text">your personal details are never shared with advertisers.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-3 h-3 bg-oosby-pink-func rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p class="font-medium text-oosby-plum mb-2">Optional</p>
+                    <p class="text-oosby-text">you choose when to see them, and whether to act.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-3 h-3 bg-oosby-teal-func rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p class="font-medium text-oosby-plum mb-2">Curated</p>
+                    <p class="text-oosby-text">selected partners only, chosen for quality and trustworthiness.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center bg-oosby-plum/5 p-8 rounded-2xl border border-oosby-plum/10">
+              <p class="text-xl font-medium text-oosby-plum mb-3">
+                So yes, we have "ads" — but not as you know them.
+              </p>
+              <p class="text-lg">
+                They're calm, transparent, and designed to help you, not distract you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Peace of Mind -->
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl text-center">
+          <h2 class="mb-12 text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight">
+            Built for peace of mind
+          </h2>
+          
+          <div class="grid gap-8 md:grid-cols-2 mb-12">
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <ul class="space-y-4 text-left">
+                <li class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-oosby-teal-func rounded-full mt-3 flex-shrink-0"></div>
+                  <span class="text-lg text-oosby-text"><strong>UK-hosted data</strong>, encrypted in transit and at rest.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-oosby-teal-func rounded-full mt-3 flex-shrink-0"></div>
+                  <span class="text-lg text-oosby-text"><strong>Password-free sign-in</strong> with passkeys, Apple, or Google.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-oosby-teal-func rounded-full mt-3 flex-shrink-0"></div>
+                  <span class="text-lg text-oosby-text"><strong>No cross-app tracking, no data sharing, no targeted advertising.</strong></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-oosby-teal-func rounded-full mt-3 flex-shrink-0"></div>
+                  <span class="text-lg text-oosby-text">Offers are <strong>matched to timing, not personal profiles.</strong></span>
+                </li>
+              </ul>
+            </Card>
+
+            <Card class="border-oosby-border bg-oosby-plum/5 p-8 flex items-center justify-center">
+              <div class="text-center">
+                <p class="text-2xl font-bold text-oosby-plum mb-4">
+                  We bring you to the offer — never the offer to you.
+                </p>
+                <div class="w-16 h-1 bg-oosby-pink-func mx-auto rounded-full"></div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-20 bg-oosby-gray">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl text-center">
+          <h2 class="mb-12 text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight">
+            Simple, transparent pricing
+          </h2>
+          
+          <Card class="border-oosby-border bg-oosby-bg p-10 max-w-2xl mx-auto">
+            <div class="space-y-6 text-lg text-oosby-text">
+              <div class="text-center">
+                <div class="flex items-center justify-center gap-8 mb-6">
+                  <div class="text-center">
+                    <div class="text-3xl font-bold text-oosby-plum mb-2">£2.99</div>
+                    <div class="text-sm text-oosby-text-muted">per month</div>
+                  </div>
+                  <div class="text-oosby-text-muted">or</div>
+                  <div class="text-center">
+                    <div class="text-3xl font-bold text-oosby-plum mb-2">£29.99</div>
+                    <div class="text-sm text-oosby-text-muted">per year</div>
+                    <div class="text-xs text-oosby-teal-func font-medium">Save 17%</div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                Oosby Premium will be available soon.
+                You'll be able to upgrade directly in the app with these simple, transparent plans.
+              </p>
+              <p class="font-medium text-oosby-plum">
+                No hidden fees. Cancel anytime.
+              </p>
+              <div class="bg-oosby-teal/10 p-6 rounded-xl border border-oosby-teal/20">
+                <p class="text-oosby-text">
+                  💡 <em>Early users will receive an invitation and launch discount when Premium becomes available.</em>
+                </p>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-5xl">
+          <h2 class="mb-16 text-center text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight">
+            Why people choose Premium
+          </h2>
+          
+          <div class="grid gap-10 md:grid-cols-2">
+            <Card class="border-oosby-border bg-oosby-surface shadow-md">
+              <div class="p-10">
+                <p class="mb-6 text-xl font-medium italic leading-relaxed text-oosby-text">
+                  "Oosby quietly keeps track of everything — and when an offer appears, it's because I actually need it."
+                </p>
+                <p class="text-sm font-semibold text-oosby-text-muted">
+                  — Beta tester, Manchester
+                </p>
+              </div>
+            </Card>
+
+            <Card class="border-oosby-border bg-oosby-surface shadow-md">
+              <div class="p-10">
+                <p class="mb-6 text-xl font-medium italic leading-relaxed text-oosby-text">
+                  "It's the only app that helps without selling my data."
+                </p>
+                <p class="text-sm font-semibold text-oosby-text-muted">
+                  — Early user, Bristol
+                </p>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-28 bg-oosby-gray">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl text-center">
+          <h2 class="mb-8 text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight">
+            Start free. Stay in control.
+          </h2>
+          
+          <div class="bg-oosby-plum/5 p-10 rounded-2xl border border-oosby-plum/10 mb-12">
+            <div class="space-y-6 text-lg leading-relaxed text-oosby-text">
+              <p>
+                Oosby is free for one household and one car — enough to see how it works and why it's different.
+              </p>
+              <p>
+                When you're ready to organise more, share with others, and unlock everything, upgrade to Oosby Premium.
+              </p>
+              <p class="text-xl font-medium text-oosby-plum">
+                Because peace of mind shouldn't come at the cost of your privacy.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              variant="oosby-primary"
+              size="lg"
+              href="https://app.oosby.com/register"
+              class="bg-oosby-plum hover:bg-oosby-plum/90 text-white"
+            >
+              Get started →
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              href="/trust-privacy"
+              class="border-oosby-plum text-oosby-plum hover:bg-oosby-plum hover:text-white"
+            >
+              Learn about privacy
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer - Same as homepage -->
+    <footer class="bg-black py-8">
+      <div class="px-6 lg:px-16">
+        <!-- Logo and Columns -->
+        <div class="grid gap-8 md:grid-cols-4 lg:grid-cols-5">
+          <!-- Logo -->
+          <div>
+            <a href="/">
+              <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert mb-4" />
+            </a>
+            <p class="text-xs text-white/60 leading-relaxed max-w-48">
+              Oosby is your quietly clever<br />household companion.<br />Built for calm, designed for trust.
+            </p>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Company</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/about" class="text-xs text-white/90 transition hover:text-white">About</a>
+              </li>
+              <li>
+                <a href="/contact" class="text-xs text-white/90 transition hover:text-white">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Useful Links -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Useful Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/premium" class="text-xs text-white/90 transition hover:text-white">Premium</a>
+              </li>
+              <li>
+                <a href="/support" class="text-xs text-white/90 transition hover:text-white">Support</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Legal</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/trust-privacy" class="text-xs text-white/90 transition hover:text-white">Privacy</a>
+              </li>
+              <li>
+                <a href="/terms" class="text-xs text-white/90 transition hover:text-white">Terms</a>
+              </li>
+              <li>
+                <a href="/trust-privacy" class="text-xs text-white/90 transition hover:text-white">Trust</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="mt-12 border-t border-white/10 pt-8">
+          <div class="flex justify-end">
+            <p class="text-xs text-white/60">
+              © Oosby 2025
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</Layout>

@@ -1,0 +1,315 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="About - Oosby" description="Oosby is built by a small team who believe life admin doesn't have to be stressful. Learn about our mission and the story behind the quietly clever household companion.">
+  <div class="min-h-screen bg-oosby-bg">
+    <!-- Navigation Bar - Black -->
+    <header class="sticky top-0 z-50 h-16 border-b border-white/10 bg-black backdrop-blur-sm">
+      <nav class="flex h-full items-center justify-between px-6 lg:px-16">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <a href="/">
+            <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert" />
+          </a>
+        </div>
+
+        <!-- Navigation Links & Actions -->
+        <div class="flex items-center gap-6">
+          <a href="/premium" class="hidden text-sm text-white/90 transition hover:text-white md:block">
+            Premium
+          </a>
+          <a href="/support" class="hidden text-sm text-white/90 transition hover:text-white md:block">
+            Support
+          </a>
+          <Button
+            variant="outline"
+            size="sm"
+            href="https://app.oosby.com/register"
+            class="hidden border-white/20 bg-transparent text-white hover:bg-white/10 md:flex"
+          >
+            Sign Up
+          </Button>
+          <Button
+            variant="oosby-primary"
+            size="sm"
+            href="https://app.oosby.com/signin"
+            class="bg-oosby-pink-func hover:bg-oosby-pink"
+          >
+            Sign In
+          </Button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 lg:py-28">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl text-center">
+          <h1 class="mb-6 text-5xl font-normal tracking-tight text-oosby-plum lg:text-6xl font-display">
+            About Oosby
+          </h1>
+          <p class="mx-auto mb-10 max-w-2xl text-2xl font-medium leading-relaxed text-oosby-text lg:text-3xl">
+            Built for people who want calm, not chaos.
+          </p>
+          <p class="mx-auto max-w-3xl text-xl leading-relaxed text-oosby-text-muted">
+            Oosby started with a simple observation: life admin doesn't have to be overwhelming. 
+            It just needs to be organized — quietly, securely, and on your terms.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-20 bg-oosby-gray">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl">
+          <h2 class="mb-12 text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight text-center">
+            Our story
+          </h2>
+          
+          <div class="space-y-8 text-lg leading-relaxed text-oosby-text">
+            <p>
+              We've all been there — sticky notes on the fridge, calendar reminders scattered across apps, 
+              that nagging feeling you've forgotten something important. Life admin isn't difficult because 
+              it's complex; it's difficult because it's everywhere.
+            </p>
+            
+            <p>
+              <strong class="text-oosby-plum">Oosby was born from this frustration.</strong> 
+              We wanted a single, calm place for all the boring-but-important stuff — 
+              insurance renewals, MOT dates, service appointments, family records.
+            </p>
+            
+            <p>
+              But we also wanted something different from the usual productivity apps. 
+              We didn't want another tool that demands constant attention, sends endless notifications, 
+              or treats our personal information as a product to be sold.
+            </p>
+            
+            <div class="bg-oosby-plum/5 p-8 rounded-2xl border border-oosby-plum/10">
+              <p class="text-xl font-medium text-oosby-plum mb-4">
+                So we built the app we wanted to use ourselves.
+              </p>
+              <p>
+                Quiet. Helpful. Respectful. A tool that works in the background, 
+                remembers what matters, and leaves you alone the rest of the time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Approach Section -->
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-6xl">
+          <h2 class="mb-16 text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight text-center">
+            How we work
+          </h2>
+          
+          <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Privacy First -->
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <h3 class="mb-4 text-xl font-bold text-oosby-plum">Privacy first</h3>
+              <p class="text-oosby-text leading-relaxed">
+                Your data stays yours. We don't sell it, share it, or use it to build profiles. 
+                UK data stays in the UK, encrypted and secure.
+              </p>
+            </Card>
+
+            <!-- Calm by Design -->
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <h3 class="mb-4 text-xl font-bold text-oosby-plum">Calm by design</h3>
+              <p class="text-oosby-text leading-relaxed">
+                No endless notifications, no attention-grabbing tactics. 
+                Oosby works quietly and appears only when you need it.
+              </p>
+            </Card>
+
+            <!-- Transparent -->
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <h3 class="mb-4 text-xl font-bold text-oosby-plum">Transparent</h3>
+              <p class="text-oosby-text leading-relaxed">
+                We explain how we work, what we do with your data, and how we make money. 
+                No hidden fees, no surprise changes.
+              </p>
+            </Card>
+
+            <!-- Human-Centered -->
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <h3 class="mb-4 text-xl font-bold text-oosby-plum">Human-centered</h3>
+              <p class="text-oosby-text leading-relaxed">
+                Real support from real people. We build for humans, not metrics. 
+                If something doesn't feel right, we want to hear about it.
+              </p>
+            </Card>
+
+            <!-- Simple -->
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <h3 class="mb-4 text-xl font-bold text-oosby-plum">Simple</h3>
+              <p class="text-oosby-text leading-relaxed">
+                We resist feature bloat. Every addition must make life simpler, not more complicated. 
+                Less is often more.
+              </p>
+            </Card>
+
+            <!-- Sustainable -->
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <h3 class="mb-4 text-xl font-bold text-oosby-plum">Sustainable</h3>
+              <p class="text-oosby-text leading-relaxed">
+                We build a business that works for users and for us. 
+                Fair pricing, honest revenue, long-term thinking.
+              </p>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Team Section -->
+    <section class="py-20 bg-oosby-gray">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl text-center">
+          <h2 class="mb-12 text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight">
+            The team
+          </h2>
+          
+          <p class="text-xl text-oosby-text mb-12 max-w-3xl mx-auto">
+            Oosby is built by a small, focused team at Ridley Industries. 
+            We're based in the UK and believe that good software comes from people who care about the details.
+          </p>
+          
+          <div class="bg-oosby-plum/5 p-8 rounded-2xl border border-oosby-plum/10">
+            <p class="text-lg text-oosby-text mb-4">
+              We're still in the early days — building, learning, and improving based on real feedback from real users.
+            </p>
+            <p class="text-xl font-medium text-oosby-plum">
+              If you have ideas, questions, or just want to say hello, we'd love to hear from you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl text-center">
+          <h2 class="mb-8 text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight">
+            Ready to give it a try?
+          </h2>
+          
+          <p class="text-xl text-oosby-text mb-12">
+            Oosby is free to start and designed to grow with you. Add your first thing and see how it feels.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              variant="oosby-primary"
+              size="lg"
+              href="https://app.oosby.com/register"
+              class="bg-oosby-plum hover:bg-oosby-plum/90 text-white"
+            >
+              Get started →
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              href="/support"
+              class="border-oosby-plum text-oosby-plum hover:bg-oosby-plum hover:text-white"
+            >
+              Questions? Get help
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer - Same as homepage -->
+    <footer class="bg-black py-8">
+      <div class="px-6 lg:px-16">
+        <!-- Logo and Columns -->
+        <div class="grid gap-8 md:grid-cols-4 lg:grid-cols-5">
+          <!-- Logo -->
+          <div>
+            <a href="/">
+              <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert mb-4" />
+            </a>
+            <p class="text-xs text-white/60 leading-relaxed max-w-48">
+              Oosby is your quietly clever<br />household companion.<br />Built for calm, designed for trust.
+            </p>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Company</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/about" class="text-xs text-white transition hover:text-white">About</a>
+              </li>
+              <li>
+                <a href="/contact" class="text-xs text-white/90 transition hover:text-white">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Useful Links -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Useful Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/premium" class="text-xs text-white/90 transition hover:text-white">Premium</a>
+              </li>
+              <li>
+                <a href="/support" class="text-xs text-white/90 transition hover:text-white">Support</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Legal</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/trust" class="text-xs text-white/90 transition hover:text-white">Trust</a>
+              </li>
+              <li>
+                <a href="/privacy" class="text-xs text-white/90 transition hover:text-white">Privacy</a>
+              </li>
+              <li>
+                <a href="/cookies" class="text-xs text-white/90 transition hover:text-white">Cookies</a>
+              </li>
+              <li>
+                <a href="/terms" class="text-xs text-white/90 transition hover:text-white">Terms</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- App Links -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Get Oosby</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="https://app.oosby.com/signin" class="text-xs text-white/90 transition hover:text-white">Sign In</a>
+              </li>
+              <li>
+                <a href="https://app.oosby.com/register" class="text-xs text-white/90 transition hover:text-white">Sign Up</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="mt-8 border-t border-white/10 pt-4">
+          <p class="text-center text-xs text-white/50">
+            © Oosby 2025. Built with care in the UK.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</Layout>
