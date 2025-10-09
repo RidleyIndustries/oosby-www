@@ -123,7 +123,7 @@ const content = {
             href="/premium"
             class="hidden text-sm text-white/90 transition hover:text-white md:block"
           >
-            Premium
+            Pricing
           </a>
           <a href="/support" class="hidden text-sm text-white/90 transition hover:text-white md:block">
             Support
@@ -623,7 +623,7 @@ const content = {
                 <a href="/about" class="text-xs text-white/90 transition hover:text-white">About</a>
               </li>
               <li>
-                <a href="/contact" class="text-xs text-white/90 transition hover:text-white">{content.footer.links.contact}</a>
+                <a href="/contact" class="text-xs text-white/90 transition hover:text-white">Contact</a>
               </li>
             </ul>
           </div>
@@ -633,7 +633,7 @@ const content = {
             <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Useful Links</h3>
             <ul class="space-y-2">
               <li>
-                <a href="/premium" class="text-xs text-white/90 transition hover:text-white">Premium</a>
+                <a href="/premium" class="text-xs text-white/90 transition hover:text-white">Pricing</a>
               </li>
               <li>
                 <a href="/support" class="text-xs text-white/90 transition hover:text-white">Support</a>
@@ -658,13 +658,16 @@ const content = {
           </div>
         </div>
 
-        <!-- Bottom Section -->
-        <div class="mt-12 border-t border-white/10 pt-8">
-          <div class="flex justify-end">
-            <p class="text-xs text-white/60">
-              {content.footer.copyright}
-            </p>
-          </div>
+        <!-- Copyright moved above HR -->
+        <div class="flex justify-between items-end mt-8">
+          <div></div>
+          <p class="text-xs text-white/60">
+            {content.footer.copyright}
+          </p>
+        </div>
+        
+        <!-- Bottom Section - just the HR -->
+        <div class="mt-8 border-t border-white/10">
         </div>
       </div>
     </footer>
