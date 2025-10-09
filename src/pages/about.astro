@@ -19,7 +19,7 @@ import Card from '../components/Card.astro';
         <!-- Navigation Links & Actions -->
         <div class="flex items-center gap-6">
           <a href="/premium" class="hidden text-sm text-white/90 transition hover:text-white md:block">
-            Premium
+            Pricing
           </a>
           <a href="/support" class="hidden text-sm text-white/90 transition hover:text-white md:block">
             Support
@@ -51,13 +51,53 @@ import Card from '../components/Card.astro';
           <h1 class="mb-6 text-5xl font-normal tracking-tight text-oosby-plum lg:text-6xl font-display">
             About Oosby
           </h1>
-          <p class="mx-auto mb-10 max-w-2xl text-2xl font-medium leading-relaxed text-oosby-text lg:text-3xl">
+          <p class="mx-auto mb-10 max-w-2xl text-2xl font-semibold leading-relaxed text-oosby-text lg:text-3xl">
             Built for people who want calm, not chaos.
           </p>
-          <p class="mx-auto max-w-3xl text-xl leading-relaxed text-oosby-text-muted">
+          <p class="mx-auto max-w-3xl text-xl font-medium leading-relaxed text-oosby-text-muted">
             Oosby started with a simple observation: life admin doesn't have to be overwhelming. 
-            It just needs to be organized — quietly, securely, and on your terms.
+            It just needs to be organized, quietly, securely, and on your terms.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Vision Section -->
+    <section class="py-16 bg-oosby-gray/50">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-6xl">
+          <div class="grid items-center gap-12 lg:grid-cols-2">
+            <div>
+              <h2 class="mb-6 text-3xl font-bold text-oosby-plum font-display-tight">
+                What we're building
+              </h2>
+              <p class="text-lg font-medium text-oosby-text mb-6 leading-relaxed">
+                Clean, intuitive interfaces that make life admin feel effortless. 
+                No clutter, no confusion, just calm organization.
+              </p>
+              <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2">
+                  <div class="w-2 h-2 bg-oosby-teal-func rounded-full"></div>
+                  <span class="text-sm font-semibold text-oosby-text-muted">Simple by design</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-2 h-2 bg-oosby-pink-func rounded-full"></div>
+                  <span class="text-sm font-semibold text-oosby-text-muted">Privacy first</span>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute -inset-3 bg-gradient-to-r from-oosby-teal-func/20 to-oosby-plum/20 rounded-2xl blur-sm"></div>
+              <div class="relative overflow-hidden rounded-2xl bg-white shadow-xl">
+                <img
+                  src="/images/product/example-section-screen.png"
+                  alt="Oosby interface showing organized household sections"
+                  class="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -70,16 +110,16 @@ import Card from '../components/Card.astro';
             Our story
           </h2>
           
-          <div class="space-y-8 text-lg leading-relaxed text-oosby-text">
+          <div class="space-y-8 text-lg font-medium leading-relaxed text-oosby-text">
             <p>
-              We've all been there — sticky notes on the fridge, calendar reminders scattered across apps, 
+              We've all been there, sticky notes on the fridge, calendar reminders scattered across apps, 
               that nagging feeling you've forgotten something important. Life admin isn't difficult because 
-              it's complex; it's difficult because it's everywhere.
+              it's complex, it's difficult because it's everywhere.
             </p>
             
             <p>
               <strong class="text-oosby-plum">Oosby was born from this frustration.</strong> 
-              We wanted a single, calm place for all the boring-but-important stuff — 
+              We wanted a single, calm place for all the boring-but-important stuff, 
               insurance renewals, MOT dates, service appointments, family records.
             </p>
             
@@ -178,10 +218,16 @@ import Card from '../components/Card.astro';
             The team
           </h2>
           
-          <p class="text-xl text-oosby-text mb-12 max-w-3xl mx-auto">
-            Oosby is built by a small, focused team at Ridley Industries. 
-            We're based in the UK and believe that good software comes from people who care about the details.
-          </p>
+          <div class="bg-oosby-plum/5 p-8 rounded-2xl border border-oosby-plum/10 mb-12">
+            <p class="text-2xl font-bold text-oosby-plum mb-4">
+              One human + two AI agents, building something useful.
+            </p>
+            <p class="text-lg font-medium text-oosby-text">
+              Oosby is crafted by a small team at Ridley Industries, with help from 
+              some very capable AI collaborators. We believe good software comes from 
+              people (and robots) who care about the details.
+            </p>
+          </div>
           
           <div class="bg-oosby-plum/5 p-8 rounded-2xl border border-oosby-plum/10">
             <p class="text-lg text-oosby-text mb-4">
@@ -262,7 +308,7 @@ import Card from '../components/Card.astro';
             <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Useful Links</h3>
             <ul class="space-y-2">
               <li>
-                <a href="/premium" class="text-xs text-white/90 transition hover:text-white">Premium</a>
+                <a href="/premium" class="text-xs text-white/90 transition hover:text-white">Pricing</a>
               </li>
               <li>
                 <a href="/support" class="text-xs text-white/90 transition hover:text-white">Support</a>
