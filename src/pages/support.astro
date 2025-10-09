@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 import Card from '../components/Card.astro';
+import '../styles/global.css';
 ---
 
 <Layout title="Support - Oosby" description="We're here to help. Oosby is designed to make life simpler — not to make you hunt for help. Find answers to common questions or get in touch.">
@@ -19,7 +20,7 @@ import Card from '../components/Card.astro';
         <!-- Navigation Links & Actions -->
         <div class="flex items-center gap-6">
           <a href="/premium" class="hidden text-sm text-white/90 transition hover:text-white md:block">
-            Premium
+            Pricing
           </a>
           <a href="/support" class="hidden text-sm text-white transition hover:text-white md:block">
             Support
@@ -51,11 +52,11 @@ import Card from '../components/Card.astro';
           <h1 class="mb-6 text-5xl font-normal tracking-tight text-oosby-plum lg:text-6xl font-display">
             Support
           </h1>
-          <p class="mx-auto mb-10 max-w-2xl text-2xl font-medium leading-relaxed text-oosby-text lg:text-3xl">
+          <p class="mx-auto mb-10 max-w-2xl text-2xl font-semibold leading-relaxed text-oosby-text lg:text-3xl">
             We're here to help.
           </p>
-          <p class="mx-auto max-w-3xl text-xl leading-relaxed text-oosby-text-muted">
-            Oosby is designed to make life simpler — not to make you hunt for help.<br />
+          <p class="mx-auto max-w-3xl text-xl font-medium leading-relaxed text-oosby-text-muted">
+            Oosby is designed to make life simpler, not to make you hunt for help.<br />
             If you ever get stuck, or something doesn't feel right, we'll get you sorted quickly.
           </p>
         </div>
@@ -67,7 +68,7 @@ import Card from '../components/Card.astro';
       <div class="container mx-auto px-4">
         <div class="mx-auto max-w-4xl text-center">
           <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
-            💬 Get in touch
+            Get in touch
           </h2>
           
           <Card class="border-oosby-border bg-oosby-bg p-10 max-w-2xl mx-auto">
@@ -80,7 +81,7 @@ import Card from '../components/Card.astro';
                   href="mailto:support@oosby.com" 
                   class="inline-flex items-center gap-2 text-2xl font-bold text-oosby-pink-func hover:text-oosby-pink transition-colors"
                 >
-                  📧 support@oosby.com
+                  support@oosby.com
                 </a>
               </div>
               <div class="bg-oosby-teal/10 p-6 rounded-xl border border-oosby-teal/20">
@@ -97,12 +98,114 @@ import Card from '../components/Card.astro';
       </div>
     </section>
 
+    <!-- Getting Started Visual Guide -->
+    <section class="py-20 bg-oosby-gray/30">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-6xl">
+          <h2 class="mb-16 text-center text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight">
+            Starting your journey with Oosby
+          </h2>
+          <div class="grid items-center gap-12 lg:grid-cols-2">
+            <div class="lg:order-2">
+              <div class="relative">
+                <div class="absolute -inset-3 bg-gradient-to-r from-oosby-teal-func/20 to-oosby-pink-func/20 rounded-2xl blur-sm"></div>
+                <div class="relative overflow-hidden rounded-2xl bg-white shadow-xl">
+                  <img
+                    src="/images/product/add-your-first-thing.png"
+                    alt="Getting started with Oosby - add your first thing"
+                    class="w-full h-auto"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="lg:order-1">
+              <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-oosby-pink-func/10 text-sm font-bold text-oosby-pink-func">
+                    1
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-oosby-plum mb-2">Sign up with one click</h3>
+                    <p class="text-lg font-medium text-oosby-text">Use Apple, Google, or passkeys. No passwords to remember.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-oosby-teal-func/10 text-sm font-bold text-oosby-teal-func">
+                    2
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-oosby-plum mb-2">Add your first item</h3>
+                    <p class="text-lg font-medium text-oosby-text">Start with anything important — your car, home insurance, or recurring appointments.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-oosby-plum/10 text-sm font-bold text-oosby-plum">
+                    3
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-oosby-plum mb-2">Stay ahead, stay calm</h3>
+                    <p class="text-lg font-medium text-oosby-text">We'll remind you when things need attention, quietly and just in time.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Organized Sections Showcase -->
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-6xl">
+          <div class="grid items-center gap-12 lg:grid-cols-2">
+            <div class="lg:order-1">
+              <h2 class="mb-6 text-3xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-4xl font-display-tight">
+                Everything in its right place
+              </h2>
+              <p class="text-lg font-medium text-oosby-text mb-6 leading-relaxed">
+                Oosby organizes your household items into clear, logical sections. No more hunting through scattered notes. Everything you need is exactly where you expect it.
+              </p>
+              <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-oosby-teal-func rounded-full"></div>
+                  <span class="text-base font-medium text-oosby-text">Smart categorization</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-oosby-pink-func rounded-full"></div>
+                  <span class="text-base font-medium text-oosby-text">Quick visual status</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-oosby-plum rounded-full"></div>
+                  <span class="text-base font-medium text-oosby-text">Important dates highlighted</span>
+                </div>
+              </div>
+            </div>
+            <div class="lg:order-2">
+              <div class="relative max-w-sm mx-auto">
+                <div class="absolute -inset-3 bg-gradient-to-r from-oosby-pink-func/20 to-oosby-teal/20 rounded-2xl blur-sm"></div>
+                <div class="relative overflow-hidden rounded-2xl bg-white shadow-xl">
+                  <img
+                    src="/images/product/sections-tall-narrow.png"
+                    alt="Oosby sections view showing organized household categories"
+                    class="w-full h-auto"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ Section -->
     <section class="py-20">
       <div class="container mx-auto px-4">
         <div class="mx-auto max-w-4xl">
           <h2 class="mb-16 text-center text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight">
-            🔍 Frequently Asked Questions
+            Frequently Asked Questions
           </h2>
           
           <div class="space-y-8">
@@ -114,7 +217,7 @@ import Card from '../components/Card.astro';
               </h3>
               <p class="text-lg leading-relaxed text-oosby-text">
                 Oosby is your quietly clever household companion.
-                It remembers the boring-but-important stuff — from MOTs to insurance renewals — and helps you stay on top of it all, without stress or clutter.
+                It remembers the boring-but-important stuff, from MOTs to insurance renewals, and helps you stay on top of it all without stress or clutter.
               </p>
             </Card>
 
@@ -126,7 +229,7 @@ import Card from '../components/Card.astro';
               <div class="space-y-4 text-lg leading-relaxed text-oosby-text">
                 <p>Yes. Oosby's core features are free.</p>
                 <p>
-                  We plan to offer optional paid features later — for example, enhanced storage, sharing options, or smart household insights — but you'll always know before you pay for anything.
+                  We plan to offer optional paid features later (for example, enhanced storage, sharing options, or smart household insights) but you'll always know before you pay for anything.
                 </p>
               </div>
             </Card>
@@ -141,7 +244,7 @@ import Card from '../components/Card.astro';
                 <ul class="space-y-3 text-lg text-oosby-text ml-4">
                   <li>• UK users' data stays in the UK.</li>
                   <li>• All data is encrypted in transit (HTTPS) and at rest.</li>
-                  <li>• We use <strong>passkeys</strong> and secure sign-in via <strong>Apple</strong> or <strong>Google</strong> — no passwords to steal.</li>
+                  <li>• We use <strong>passkeys</strong> and secure sign-in via <strong>Apple</strong> or <strong>Google</strong>. No passwords to steal.</li>
                   <li>• Your information is never shared with advertisers.</li>
                 </ul>
                 <p class="text-lg text-oosby-text">
@@ -158,11 +261,11 @@ import Card from '../components/Card.astro';
               <div class="space-y-4 text-lg leading-relaxed text-oosby-text">
                 <p>We don't sell or share your information. Ever.</p>
                 <p>
-                  When you're due a renewal or key date, Oosby may show you relevant offers — but only <strong>when you choose to see them</strong>.
+                  When you're due a renewal or key date, Oosby may show you relevant offers, but only <strong>when you choose to see them</strong>.
                   If you take up an offer, Oosby may receive a small referral fee from the provider.
                 </p>
                 <p>
-                  That's how we keep Oosby sustainable — while keeping your data private.
+                  That's how we keep Oosby sustainable while keeping your data private.
                 </p>
               </div>
             </Card>
@@ -174,7 +277,7 @@ import Card from '../components/Card.astro';
               </h3>
               <div class="space-y-4 text-lg leading-relaxed text-oosby-text">
                 <p>
-                  We only ask for what's needed to help Oosby work properly — for example, your car registration so we can check its MOT date, or your postcode for location-specific reminders.
+                  We only ask for what's needed to help Oosby work properly (for example, your car registration so we can check its MOT date, or your postcode for location-specific reminders).
                 </p>
                 <p class="font-medium text-oosby-plum">
                   You stay in control at all times.
@@ -193,7 +296,7 @@ import Card from '../components/Card.astro';
                   Just sign in again using the same <strong>Apple</strong>, <strong>Google</strong>, or <strong>passkey</strong> account you used originally.
                 </p>
                 <p>
-                  If you're still having trouble, drop us an email — we can help.
+                  If you're still having trouble, drop us an email. We can help.
                 </p>
               </div>
             </Card>
@@ -204,7 +307,7 @@ import Card from '../components/Card.astro';
                 7. Can I share Oosby with family or housemates?
               </h3>
               <div class="space-y-4 text-lg leading-relaxed text-oosby-text">
-                <p class="font-medium text-oosby-teal-func">Shared access is coming soon!</p>
+                <p class="font-medium text-oosby-teal-func">Shared access is coming soon.</p>
                 <p>
                   Right now, each person has their own account, but we're working on secure household sharing so everyone can stay in sync.
                 </p>
@@ -238,7 +341,7 @@ import Card from '../components/Card.astro';
                   <li>• <a href="/trust" class="text-oosby-pink-func hover:text-oosby-pink underline">Trust page</a></li>
                 </ul>
                 <p class="font-medium">
-                  They're written in plain English — no legalese, no jargon.
+                  They're written in plain English. No legalese, no jargon.
                 </p>
               </div>
             </Card>
@@ -269,7 +372,7 @@ import Card from '../components/Card.astro';
       <div class="container mx-auto px-4">
         <div class="mx-auto max-w-4xl text-center">
           <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
-            🧡 Thank you
+            Thank you
           </h2>
           
           <div class="bg-oosby-plum/5 p-10 rounded-2xl border border-oosby-plum/10">
@@ -301,7 +404,7 @@ import Card from '../components/Card.astro';
               href="mailto:support@oosby.com"
               class="border-oosby-plum text-oosby-plum hover:bg-oosby-plum hover:text-white"
             >
-              📧 Contact support
+              Contact support
             </Button>
           </div>
         </div>
@@ -341,7 +444,7 @@ import Card from '../components/Card.astro';
             <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Useful Links</h3>
             <ul class="space-y-2">
               <li>
-                <a href="/premium" class="text-xs text-white/90 transition hover:text-white">Premium</a>
+                <a href="/premium" class="text-xs text-white/90 transition hover:text-white">Pricing</a>
               </li>
               <li>
                 <a href="/support" class="text-xs text-white/90 transition hover:text-white">Support</a>
@@ -354,13 +457,13 @@ import Card from '../components/Card.astro';
             <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Legal</h3>
             <ul class="space-y-2">
               <li>
-                <a href="/trust-privacy" class="text-xs text-white/90 transition hover:text-white">Privacy</a>
+                <a href="/trust" class="text-xs text-white/90 transition hover:text-white">Trust</a>
+              </li>
+              <li>
+                <a href="/privacy" class="text-xs text-white/90 transition hover:text-white">Privacy</a>
               </li>
               <li>
                 <a href="/terms" class="text-xs text-white/90 transition hover:text-white">Terms</a>
-              </li>
-              <li>
-                <a href="/trust-privacy" class="text-xs text-white/90 transition hover:text-white">Trust</a>
               </li>
             </ul>
           </div>

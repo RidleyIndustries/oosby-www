@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 import Card from '../components/Card.astro';
+import '../styles/global.css';
 ---
 
 <Layout title="Contact - Oosby" description="Get in touch with the Oosby team. We're here to help with questions, feedback, or just to say hello.">
@@ -19,7 +20,7 @@ import Card from '../components/Card.astro';
         <!-- Navigation Links & Actions -->
         <div class="flex items-center gap-6">
           <a href="/premium" class="hidden text-sm text-white/90 transition hover:text-white md:block">
-            Premium
+            Pricing
           </a>
           <a href="/support" class="hidden text-sm text-white/90 transition hover:text-white md:block">
             Support
@@ -51,11 +52,11 @@ import Card from '../components/Card.astro';
           <h1 class="mb-6 text-5xl font-normal tracking-tight text-oosby-plum lg:text-6xl font-display">
             Contact
           </h1>
-          <p class="mx-auto mb-10 max-w-2xl text-2xl font-medium leading-relaxed text-oosby-text lg:text-3xl">
+          <p class="mx-auto mb-10 max-w-2xl text-2xl font-semibold leading-relaxed text-oosby-text lg:text-3xl">
             We'd love to hear from you.
           </p>
-          <p class="mx-auto max-w-3xl text-xl leading-relaxed text-oosby-text-muted">
-            Whether you have questions, feedback, or just want to say hello — we're here and we're listening.
+          <p class="mx-auto max-w-3xl text-xl font-medium leading-relaxed text-oosby-text-muted">
+            Whether you have questions, feedback, or just want to say hello, we're here and we're listening.
           </p>
         </div>
       </div>
@@ -69,7 +70,7 @@ import Card from '../components/Card.astro';
           <Card class="border-oosby-border bg-oosby-gray p-12 mb-12">
             <div class="text-center space-y-8">
               <h2 class="text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
-                💌 Get in touch
+                Get in touch
               </h2>
               
               <div class="text-center">
@@ -77,7 +78,7 @@ import Card from '../components/Card.astro';
                   href="mailto:support@oosby.com" 
                   class="inline-flex items-center gap-3 text-3xl font-bold text-oosby-pink-func hover:text-oosby-pink transition-colors"
                 >
-                  📧 support@oosby.com
+                  support@oosby.com
                 </a>
               </div>
               
@@ -112,12 +113,58 @@ import Card from '../components/Card.astro';
             <Card class="border-oosby-border bg-oosby-surface-2 p-8">
               <h3 class="text-2xl font-bold text-oosby-plum mb-6">What to expect</h3>
               <div class="space-y-4 text-oosby-text">
-                <p>📬 <strong>Support questions:</strong> We'll help you get unstuck or find what you need.</p>
-                <p>💡 <strong>Feature ideas:</strong> We love hearing how we can make Oosby more useful.</p>
-                <p>🐛 <strong>Bug reports:</strong> Help us fix things that aren't working as they should.</p>
-                <p>👋 <strong>Just saying hi:</strong> We're always happy to hear from users!</p>
+                <div class="space-y-3">
+                  <div class="flex items-start gap-3">
+                    <div class="w-2 h-2 bg-oosby-teal-func rounded-full mt-2 flex-shrink-0"></div>
+                    <p><strong>Support questions:</strong> We'll help you get unstuck or find what you need.</p>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <div class="w-2 h-2 bg-oosby-pink-func rounded-full mt-2 flex-shrink-0"></div>
+                    <p><strong>Feature ideas:</strong> We love hearing how we can make Oosby more useful.</p>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <div class="w-2 h-2 bg-oosby-plum rounded-full mt-2 flex-shrink-0"></div>
+                    <p><strong>Bug reports:</strong> Help us fix things that aren't working as they should.</p>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <div class="w-2 h-2 bg-oosby-teal-func rounded-full mt-2 flex-shrink-0"></div>
+                    <p><strong>Just saying hi:</strong> We're always happy to hear from users!</p>
+                  </div>
+                </div>
               </div>
             </Card>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Break -->
+    <section class="py-16 bg-oosby-gray/50">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl text-center">
+          <h2 class="mb-8 text-3xl font-bold text-oosby-plum font-display-tight">
+            See how simple it is to get started
+          </h2>
+          <div class="relative max-w-2xl mx-auto">
+            <div class="absolute -inset-3 bg-gradient-to-r from-oosby-pink-func/20 to-oosby-teal/20 rounded-2xl blur-sm"></div>
+            <div class="relative overflow-hidden rounded-2xl bg-white shadow-xl">
+              <img
+                src="/images/product/add-your-first-thing.png"
+                alt="Getting started with Oosby - clean and simple"
+                class="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="mt-8">
+            <Button
+              variant="oosby-primary"
+              size="lg"
+              href="https://app.oosby.com/register"
+              class="bg-oosby-plum hover:bg-oosby-plum/90 text-white"
+            >
+              Try Oosby free →
+            </Button>
           </div>
         </div>
       </div>
@@ -133,7 +180,7 @@ import Card from '../components/Card.astro';
           
           <div class="grid md:grid-cols-2 gap-6">
             <div class="bg-oosby-bg p-8 rounded-2xl border border-oosby-border">
-              <h3 class="text-xl font-semibold text-oosby-plum mb-4">📚 Support Centre</h3>
+              <h3 class="text-xl font-semibold text-oosby-plum mb-4">Support Centre</h3>
               <p class="text-oosby-text mb-6">
                 Check our support page for common questions and quick answers.
               </p>
@@ -147,16 +194,16 @@ import Card from '../components/Card.astro';
             </div>
             
             <div class="bg-oosby-bg p-8 rounded-2xl border border-oosby-border">
-              <h3 class="text-xl font-semibold text-oosby-plum mb-4">🌟 Try Premium</h3>
+              <h3 class="text-xl font-semibold text-oosby-plum mb-4">Try Pricing</h3>
               <p class="text-oosby-text mb-6">
-                Learn more about upcoming Premium features and pricing.
+                Learn more about our transparent pricing and features.
               </p>
               <Button
                 href="/premium"
                 variant="outline"
                 class="border-oosby-plum text-oosby-plum hover:bg-oosby-plum hover:text-white"
               >
-                Explore Premium
+                View Pricing
               </Button>
             </div>
           </div>

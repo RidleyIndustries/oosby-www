@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 import Card from '../components/Card.astro';
+import '../styles/global.css';
 ---
 
 <Layout title="Oosby Pricing - Simple plans for calmer households" description="Choose the right Oosby plan for your household. From free essentials to premium sharing and AI-powered organization. Fair, transparent pricing.">
@@ -51,7 +52,7 @@ import Card from '../components/Card.astro';
           <h1 class="mb-6 text-5xl font-normal tracking-tight text-oosby-plum lg:text-6xl font-display">
             Simple pricing for calmer households
           </h1>
-          <p class="mx-auto mb-8 max-w-2xl text-2xl font-medium leading-relaxed text-oosby-text lg:text-3xl">
+          <p class="mx-auto mb-12 max-w-2xl text-2xl font-medium leading-relaxed text-oosby-text lg:text-3xl">
             Pick a plan that fits today. Upgrade anytime as life gets busier.
           </p>
         </div>
@@ -104,7 +105,7 @@ import Card from '../components/Card.astro';
                   variant="outline" 
                   size="lg" 
                   href="https://app.oosby.com/register" 
-                  class="w-full border-oosby-plum text-oosby-plum hover:bg-oosby-plum hover:text-white"
+                  class="w-full border-oosby-plum text-oosby-plum hover:bg-oosby-plum hover:text-white bg-white"
                 >
                   Get started
                 </Button>
@@ -162,7 +163,7 @@ import Card from '../components/Card.astro';
                   variant="oosby-primary" 
                   size="lg" 
                   href="https://app.oosby.com/register" 
-                  class="w-full bg-oosby-pink-func hover:bg-oosby-pink"
+                  class="w-full bg-oosby-pink-func hover:bg-oosby-pink text-white"
                 >
                   Start Premium
                 </Button>
@@ -217,7 +218,7 @@ import Card from '../components/Card.astro';
                   variant="outline" 
                   size="lg" 
                   href="https://app.oosby.com/register" 
-                  class="w-full border-oosby-plum text-oosby-plum hover:bg-oosby-plum hover:text-white"
+                  class="w-full border-oosby-plum text-oosby-plum hover:bg-oosby-plum hover:text-white bg-white"
                 >
                   Choose Family
                 </Button>
@@ -486,7 +487,7 @@ import Card from '../components/Card.astro';
               variant="outline"
               size="lg"
               href="/support"
-              class="border-oosby-plum text-oosby-plum hover:bg-oosby-plum hover:text-white"
+              class="border-oosby-plum text-oosby-plum hover:bg-oosby-plum hover:text-white bg-white"
             >
               Questions? Get help
             </Button>
