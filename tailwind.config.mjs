@@ -56,8 +56,8 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
-				display: ['Nunito', 'Inter', 'system-ui', 'sans-serif'], // For headings/titles
-				'display-tight': ['Inter Tight', 'Inter', 'system-ui', 'sans-serif'], // For large display numbers
+				display: ['DM Serif Display', 'serif'], // For H1 hero text only
+				'display-tight': ['Inter Tight', 'Inter', 'system-ui', 'sans-serif'], // For h2-h6 headings
 				mono: ['JetBrains Mono', 'monospace']
 			},
 			fontSize: {
