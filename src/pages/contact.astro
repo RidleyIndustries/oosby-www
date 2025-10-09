@@ -1,0 +1,236 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Contact - Oosby" description="Get in touch with the Oosby team. We're here to help with questions, feedback, or just to say hello.">
+  <div class="min-h-screen bg-oosby-bg">
+    <!-- Navigation Bar - Black -->
+    <header class="sticky top-0 z-50 h-16 border-b border-white/10 bg-black backdrop-blur-sm">
+      <nav class="flex h-full items-center justify-between px-6 lg:px-16">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <a href="/">
+            <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert" />
+          </a>
+        </div>
+
+        <!-- Navigation Links & Actions -->
+        <div class="flex items-center gap-6">
+          <a href="/premium" class="hidden text-sm text-white/90 transition hover:text-white md:block">
+            Premium
+          </a>
+          <a href="/support" class="hidden text-sm text-white/90 transition hover:text-white md:block">
+            Support
+          </a>
+          <Button
+            variant="outline"
+            size="sm"
+            href="https://app.oosby.com/register"
+            class="hidden border-white/20 bg-transparent text-white hover:bg-white/10 md:flex"
+          >
+            Sign Up
+          </Button>
+          <Button
+            variant="oosby-primary"
+            size="sm"
+            href="https://app.oosby.com/signin"
+            class="bg-oosby-pink-func hover:bg-oosby-pink"
+          >
+            Sign In
+          </Button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 lg:py-28">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl text-center">
+          <h1 class="mb-6 text-5xl font-normal tracking-tight text-oosby-plum lg:text-6xl font-display">
+            Contact
+          </h1>
+          <p class="mx-auto mb-10 max-w-2xl text-2xl font-medium leading-relaxed text-oosby-text lg:text-3xl">
+            We'd love to hear from you.
+          </p>
+          <p class="mx-auto max-w-3xl text-xl leading-relaxed text-oosby-text-muted">
+            Whether you have questions, feedback, or just want to say hello — we're here and we're listening.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl">
+          
+          <Card class="border-oosby-border bg-oosby-gray p-12 mb-12">
+            <div class="text-center space-y-8">
+              <h2 class="text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+                💌 Get in touch
+              </h2>
+              
+              <div class="text-center">
+                <a 
+                  href="mailto:support@oosby.com" 
+                  class="inline-flex items-center gap-3 text-3xl font-bold text-oosby-pink-func hover:text-oosby-pink transition-colors"
+                >
+                  📧 support@oosby.com
+                </a>
+              </div>
+              
+              <div class="bg-oosby-bg p-8 rounded-xl border border-oosby-border">
+                <p class="text-lg font-medium text-oosby-plum mb-4">
+                  We aim to reply within one working day.
+                </p>
+                <p class="text-oosby-text">
+                  Please include as much detail as you can — it helps us help you faster. 
+                  Let us know what you were trying to do, what happened, and what you expected to happen.
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          <!-- Company Information -->
+          <div class="grid md:grid-cols-2 gap-8">
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <h3 class="text-2xl font-bold text-oosby-plum mb-6">Company Details</h3>
+              <div class="space-y-3 text-oosby-text">
+                <p><strong>Ridley Industries Ltd</strong></p>
+                <p>1st Floor Blackdown House<br />
+                Blackbrook Business Park<br />
+                TA1 2PX</p>
+                <p class="text-sm text-oosby-text-muted">
+                  Registered in England and Wales<br />
+                  Company number: 07297291
+                </p>
+              </div>
+            </Card>
+
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <h3 class="text-2xl font-bold text-oosby-plum mb-6">What to expect</h3>
+              <div class="space-y-4 text-oosby-text">
+                <p>📬 <strong>Support questions:</strong> We'll help you get unstuck or find what you need.</p>
+                <p>💡 <strong>Feature ideas:</strong> We love hearing how we can make Oosby more useful.</p>
+                <p>🐛 <strong>Bug reports:</strong> Help us fix things that aren't working as they should.</p>
+                <p>👋 <strong>Just saying hi:</strong> We're always happy to hear from users!</p>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alternative Options -->
+    <section class="py-16 bg-oosby-gray">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl text-center">
+          <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+            Other ways to get help
+          </h2>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-oosby-bg p-8 rounded-2xl border border-oosby-border">
+              <h3 class="text-xl font-semibold text-oosby-plum mb-4">📚 Support Centre</h3>
+              <p class="text-oosby-text mb-6">
+                Check our support page for common questions and quick answers.
+              </p>
+              <Button
+                href="/support"
+                variant="outline"
+                class="border-oosby-plum text-oosby-plum hover:bg-oosby-plum hover:text-white"
+              >
+                Visit Support
+              </Button>
+            </div>
+            
+            <div class="bg-oosby-bg p-8 rounded-2xl border border-oosby-border">
+              <h3 class="text-xl font-semibold text-oosby-plum mb-4">🌟 Try Premium</h3>
+              <p class="text-oosby-text mb-6">
+                Learn more about upcoming Premium features and pricing.
+              </p>
+              <Button
+                href="/premium"
+                variant="outline"
+                class="border-oosby-plum text-oosby-plum hover:bg-oosby-plum hover:text-white"
+              >
+                Explore Premium
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer - Same as homepage -->
+    <footer class="bg-black py-8">
+      <div class="px-6 lg:px-16">
+        <!-- Logo and Columns -->
+        <div class="grid gap-8 md:grid-cols-4 lg:grid-cols-5">
+          <!-- Logo -->
+          <div>
+            <a href="/">
+              <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert mb-4" />
+            </a>
+            <p class="text-xs text-white/60 leading-relaxed max-w-48">
+              Oosby is your quietly clever<br />household companion.<br />Built for calm, designed for trust.
+            </p>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Company</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/about" class="text-xs text-white/90 transition hover:text-white">About</a>
+              </li>
+              <li>
+                <a href="/contact" class="text-xs text-white transition hover:text-white">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Useful Links -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Useful Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/premium" class="text-xs text-white/90 transition hover:text-white">Premium</a>
+              </li>
+              <li>
+                <a href="/support" class="text-xs text-white/90 transition hover:text-white">Support</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Legal</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/trust" class="text-xs text-white/90 transition hover:text-white">Privacy</a>
+              </li>
+              <li>
+                <a href="/terms" class="text-xs text-white/90 transition hover:text-white">Terms</a>
+              </li>
+              <li>
+                <a href="/trust" class="text-xs text-white/90 transition hover:text-white">Trust</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="mt-12 border-t border-white/10 pt-8">
+          <div class="flex justify-end">
+            <p class="text-xs text-white/60">
+              © Oosby 2025
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</Layout>

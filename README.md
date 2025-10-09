@@ -1,43 +1,74 @@
-# Astro Starter Kit: Minimal
+# Oosby Website
 
-```sh
-npm create astro@latest -- --template minimal
-```
+The marketing website for Oosby — life admin, sorted.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+**Oosby** keeps track of the boring-but-important stuff — from dentist appointments to insurance renewals — automatically and just in time.
+
+## About This Site
+
+This is the main marketing website for Oosby (www.oosby.com), built with Astro and deployed on Cloudflare Pages. The site focuses on:
+
+- **Calm, confident design** that reflects Oosby's core values
+- **Privacy-first messaging** and transparent communication 
+- **Clean UX** that doesn't overwhelm visitors
+- **Performance** with fast loading and accessible content
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
-
 ```text
 /
-├── public/
+├── public/              # Static assets (images, icons, etc.)
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── components/      # Reusable Astro components
+│   ├── layouts/         # Page layouts and templates
+│   ├── pages/           # Website pages (auto-routed)
+│   │   ├── index.astro  # Homepage
+│   │   ├── about.astro  # About page
+│   │   ├── trust.astro  # Trust & privacy page
+│   │   ├── terms.astro  # Terms & conditions
+│   │   └── ...          # Additional pages
+│   └── styles/          # CSS and styling
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🧞 Development Commands
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+All commands are run from the root of the project:
 
-Any static assets, like images, can be placed in the `public/` directory.
+| Command                 | Action                                        |
+| :---------------------- | :-------------------------------------------- |
+| `npm install`           | Install dependencies                          |
+| `npm run dev`           | Start local dev server at `localhost:4321`   |
+| `npm run build`         | Build production site to `./dist/`           |
+| `npm run preview`       | Preview build locally before deploying       |
+| `npm run build:cf`      | Build for Cloudflare Pages deployment        |
+| `npm run preview:cf`    | Preview with Cloudflare Pages locally        |
+| `npm run deploy`        | Deploy to Cloudflare Pages                   |
+| `npm run check`         | Run Astro's built-in checks                  |
+| `npm run type-check`    | Type check without emitting files            |
 
-## 🧞 Commands
+## 🎨 Design System
 
-All commands are run from the root of the project, from a terminal:
+The site uses a custom design system built around Oosby's brand:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- **Typography**: DM Serif Display for headings, Inter Tight for UI
+- **Colors**: Oosby Pink, Plum, and muted grays for calm aesthetics
+- **Layout**: Clean spacing, generous white space, thoughtful hierarchy
+- **Components**: Reusable Button, Card, and layout components
 
-## 👀 Want to learn more?
+## 📝 Content Philosophy
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Plain English**: No jargon, clear communication
+- **User-focused**: Address real problems and benefits
+- **Trustworthy**: Transparent about data, privacy, and business model
+- **Calm confidence**: Professional but approachable tone
+
+## 🚀 Deployment
+
+The site is deployed on Cloudflare Pages with automatic deployments from the main branch. Static assets are optimized and served via Cloudflare's global CDN.
+
+## 🔗 Related
+
+- **App**: [app.oosby.com](https://app.oosby.com) - The main Oosby application
+- **Support**: Available through the website's support page
+- **Company**: Built by Ridley Industries Ltd (UK)

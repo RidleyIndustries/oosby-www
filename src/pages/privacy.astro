@@ -1,0 +1,594 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Privacy Policy - Oosby" description="Our Privacy Policy explains how Oosby collects, uses, and protects your personal information. Your data stays yours, always under your control.">
+  <div class="min-h-screen bg-oosby-bg">
+    <!-- Navigation Bar - Black -->
+    <header class="sticky top-0 z-50 h-16 border-b border-white/10 bg-black backdrop-blur-sm">
+      <nav class="flex h-full items-center justify-between px-6 lg:px-16">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <a href="/">
+            <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert" />
+          </a>
+        </div>
+
+        <!-- Navigation Links & Actions -->
+        <div class="flex items-center gap-6">
+          <a href="/premium" class="hidden text-sm text-white/90 transition hover:text-white md:block">
+            Premium
+          </a>
+          <a href="/support" class="hidden text-sm text-white/90 transition hover:text-white md:block">
+            Support
+          </a>
+          <Button
+            variant="outline"
+            size="sm"
+            href="https://app.oosby.com/register"
+            class="hidden border-white/20 bg-transparent text-white hover:bg-white/10 md:flex"
+          >
+            Sign Up
+          </Button>
+          <Button
+            variant="oosby-primary"
+            size="sm"
+            href="https://app.oosby.com/signin"
+            class="bg-oosby-pink-func hover:bg-oosby-pink"
+          >
+            Sign In
+          </Button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 lg:py-28">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl text-center">
+          <h1 class="mb-6 text-5xl font-normal tracking-tight text-oosby-plum lg:text-6xl font-display">
+            Privacy Policy
+          </h1>
+          <p class="mx-auto mb-10 max-w-2xl text-2xl font-medium leading-relaxed text-oosby-text lg:text-3xl">
+            Your data stays yours, always under your control.
+          </p>
+          <p class="mx-auto max-w-3xl text-xl leading-relaxed text-oosby-text-muted">
+            This Privacy Policy explains how Ridley Industries Ltd ("we", "us", "our") collects, uses, and protects your personal information when you use Oosby.
+          </p>
+          <p class="mt-6 text-sm text-oosby-text-muted">
+            Last updated: 9 October 2025 | Effective: 9 October 2025
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Summary -->
+    <section class="py-16 bg-oosby-gray">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl">
+          <Card class="border-oosby-plum/20 bg-oosby-plum/5 p-8">
+            <h2 class="mb-6 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+              📋 Quick Summary
+            </h2>
+            <div class="space-y-4 text-lg text-oosby-text">
+              <p><strong class="text-oosby-plum">We don't sell your data.</strong> Ever. Your personal information is never sold, rented, or shared with advertisers.</p>
+              <p><strong class="text-oosby-plum">No tracking or profiling.</strong> We don't collect your location, device fingerprints, or build behavioral profiles.</p>
+              <p><strong class="text-oosby-plum">UK data stays in the UK.</strong> If you're a UK user, your data is stored and processed in the United Kingdom.</p>
+              <p><strong class="text-oosby-plum">You stay in control.</strong> You can access, modify, or delete your information at any time - deletion is immediate.</p>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl space-y-16">
+
+          <!-- 1. Information We Collect -->
+          <section>
+            <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+              1. Information We Collect
+            </h2>
+            
+            <div class="space-y-8">
+              <div>
+                <h3 class="mb-4 text-xl font-semibold text-oosby-plum">Account Information</h3>
+                <p class="mb-4 text-oosby-text leading-relaxed">
+                  When you sign up for Oosby, we collect:
+                </p>
+                <ul class="ml-6 space-y-2 text-oosby-text">
+                  <li>• Your email address (via Apple, Google, or passkey registration)</li>
+                  <li>• Your name (if provided by your sign-in method)</li>
+                </ul>
+                <div class="mt-4 bg-oosby-teal/10 p-4 rounded-lg border border-oosby-teal/20">
+                  <p class="text-sm font-medium text-oosby-plum mb-2">Secure authentication:</p>
+                  <p class="text-sm text-oosby-text">
+                    We don't store passwords or authentication tokens. Sign-in is handled securely by Apple, Google, or your device's passkey system.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="mb-4 text-xl font-semibold text-oosby-plum">Household Information</h3>
+                <p class="mb-4 text-oosby-text leading-relaxed">
+                  To help Oosby work for you, you may provide:
+                </p>
+                <ul class="ml-6 space-y-2 text-oosby-text">
+                  <li>• Vehicle registration numbers (for MOT and insurance tracking)</li>
+                  <li>• Insurance policy details and renewal dates</li>
+                  <li>• Property information (for home insurance, utilities)</li>
+                  <li>• Appointment and service provider details</li>
+                  <li>• Documents and photos you choose to upload</li>
+                  <li>• Custom reminders and notes</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="mb-4 text-xl font-semibold text-oosby-plum">Technical Information</h3>
+                <p class="mb-4 text-oosby-text leading-relaxed">
+                  To provide and improve our service, we collect minimal technical data:
+                </p>
+                <ul class="ml-6 space-y-2 text-oosby-text">
+                  <li>• Basic usage patterns (which features are used, for service improvement)</li>
+                  <li>• Error logs (to fix bugs and improve performance)</li>
+                </ul>
+                <div class="mt-4 bg-oosby-teal/10 p-4 rounded-lg border border-oosby-teal/20">
+                  <p class="text-sm font-medium text-oosby-plum mb-2">What we DON'T collect:</p>
+                  <ul class="text-sm text-oosby-text space-y-1">
+                    <li>• Your location or IP address</li>
+                    <li>• Device fingerprinting or tracking identifiers</li>
+                    <li>• Detailed browsing behavior or click patterns</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 2. How We Use Your Information -->
+          <section>
+            <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+              2. How We Use Your Information
+            </h2>
+            
+            <div class="space-y-6">
+              <div class="bg-oosby-gray p-6 rounded-xl">
+                <h3 class="mb-3 text-xl font-semibold text-oosby-plum">Core Service Delivery</h3>
+                <ul class="space-y-2 text-oosby-text">
+                  <li>• Tracking your renewals, MOTs, and important dates</li>
+                  <li>• Sending you timely reminders and notifications</li>
+                  <li>• Storing your documents and household information securely</li>
+                  <li>• Providing customer support when you need help</li>
+                </ul>
+              </div>
+
+              <div class="bg-oosby-gray p-6 rounded-xl">
+                <h3 class="mb-3 text-xl font-semibold text-oosby-plum">Service Improvement</h3>
+                <ul class="space-y-2 text-oosby-text">
+                  <li>• Understanding which features are most helpful</li>
+                  <li>• Fixing bugs and improving performance</li>
+                  <li>• Developing new features based on usage patterns</li>
+                </ul>
+              </div>
+
+              <div class="bg-oosby-gray p-6 rounded-xl">
+                <h3 class="mb-3 text-xl font-semibold text-oosby-plum">Optional Offers</h3>
+                <ul class="space-y-2 text-oosby-text">
+                  <li>• Showing relevant insurance, service, or product offers when you choose to see them</li>
+                  <li>• Matching offers to your renewal dates and needs</li>
+                  <li>• <strong>Important:</strong> We never share your data with offer providers - you choose what to see, when to see it</li>
+                </ul>
+                <div class="mt-3 bg-oosby-plum/10 p-3 rounded border border-oosby-plum/20">
+                  <p class="text-sm font-medium text-oosby-plum">
+                    You stay in complete control - offers are shown to you, not shared about you.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 3. Information Sharing -->
+          <section>
+            <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+              3. Information Sharing and Disclosure
+            </h2>
+            
+            <div class="bg-oosby-teal/10 p-8 rounded-xl border border-oosby-teal/20 mb-8">
+              <p class="text-xl font-medium text-oosby-plum mb-4">
+                We do not sell, rent, or trade your personal information to third parties. Period.
+              </p>
+              <p class="text-oosby-text">
+                Your data is yours, and we treat it with the respect it deserves.
+              </p>
+            </div>
+
+            <div class="space-y-6">
+              <div>
+                <h3 class="mb-4 text-xl font-semibold text-oosby-plum">When We May Share Information</h3>
+                <p class="mb-4 text-oosby-text">We only share your information in these limited circumstances:</p>
+                <ul class="ml-6 space-y-3 text-oosby-text">
+                  <li>• <strong>For service delivery only</strong> - With trusted technical partners who help us operate Oosby (under strict data processing agreements)</li>
+                  <li>• <strong>Legal requirements</strong> - If required by law, court order, or to protect our legal rights</li>
+                  <li>• <strong>Business transfer</strong> - If Oosby is acquired, your data would transfer under the same privacy commitments</li>
+                </ul>
+                <div class="mt-4 bg-oosby-plum/10 p-4 rounded border border-oosby-plum/20">
+                  <p class="text-sm font-medium text-oosby-plum mb-2">
+                    When you choose to see offers:
+                  </p>
+                  <p class="text-sm text-oosby-text">
+                    We show you relevant offers based on your renewal dates, but your personal information is never shared with offer providers. They only know if you choose to contact them directly.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="mb-4 text-xl font-semibold text-oosby-plum">Service Providers</h3>
+                <p class="mb-4 text-oosby-text">We work with carefully selected technical partners to deliver Oosby:</p>
+                <ul class="ml-6 space-y-2 text-oosby-text">
+                  <li>• Cloud hosting providers (for secure data storage)</li>
+                  <li>• Email service providers (for reminders and notifications)</li>
+                  <li>• Government APIs (for MOT, insurance validation where applicable)</li>
+                  <li>• Payment processors (for Premium subscriptions)</li>
+                </ul>
+                <p class="mt-4 text-oosby-text">
+                  All service providers are contractually required to protect your data and use it only for providing services to Oosby.
+                </p>
+                <div class="mt-4 bg-oosby-teal/10 p-4 rounded border border-oosby-teal/20">
+                  <p class="text-sm font-medium text-oosby-plum mb-2">Offer partners are different:</p>
+                  <p class="text-sm text-oosby-text">
+                    We maintain a separate list of trusted offer suppliers, but they never receive your personal data. 
+                    When you choose to see offers, we show you options without sharing who you are.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 4. Data Security -->
+          <section>
+            <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+              4. Data Security
+            </h2>
+            
+            <p class="mb-6 text-lg text-oosby-text">
+              We take the security of your information seriously and implement multiple layers of protection:
+            </p>
+
+            <div class="grid gap-6 md:grid-cols-2">
+              <div class="bg-oosby-gray p-6 rounded-xl">
+                <h3 class="mb-3 text-lg font-semibold text-oosby-plum">Encryption</h3>
+                <ul class="space-y-2 text-oosby-text text-sm">
+                  <li>• All data encrypted in transit (HTTPS/TLS)</li>
+                  <li>• All data encrypted at rest</li>
+                  <li>• Secure database connections</li>
+                </ul>
+              </div>
+
+              <div class="bg-oosby-gray p-6 rounded-xl">
+                <h3 class="mb-3 text-lg font-semibold text-oosby-plum">Authentication</h3>
+                <ul class="space-y-2 text-oosby-text text-sm">
+                  <li>• No passwords stored - we use secure passkeys</li>
+                  <li>• Apple and Google secure sign-in</li>
+                  <li>• Multi-factor authentication available</li>
+                </ul>
+              </div>
+
+              <div class="bg-oosby-gray p-6 rounded-xl">
+                <h3 class="mb-3 text-lg font-semibold text-oosby-plum">Infrastructure</h3>
+                <ul class="space-y-2 text-oosby-text text-sm">
+                  <li>• UK-based secure data centers</li>
+                  <li>• Regular security audits and monitoring</li>
+                  <li>• Access controls and activity logging</li>
+                </ul>
+              </div>
+
+              <div class="bg-oosby-gray p-6 rounded-xl">
+                <h3 class="mb-3 text-lg font-semibold text-oosby-plum">Team Access</h3>
+                <ul class="space-y-2 text-oosby-text text-sm">
+                  <li>• Minimal team access to personal data</li>
+                  <li>• Access only for support or technical issues</li>
+                  <li>• All access logged and monitored</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- 5. Your Rights -->
+          <section>
+            <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+              5. Your Rights and Choices
+            </h2>
+            
+            <p class="mb-6 text-lg text-oosby-text">
+              Under UK GDPR and data protection laws, you have the following rights:
+            </p>
+
+            <div class="space-y-6">
+              <Card class="border-oosby-border bg-oosby-surface-2 p-6">
+                <h3 class="mb-3 text-xl font-semibold text-oosby-plum">✅ Right to Access</h3>
+                <p class="text-oosby-text">
+                  You can request a copy of all personal information we hold about you. 
+                  Most of this is available directly in your Oosby account.
+                </p>
+              </Card>
+
+              <Card class="border-oosby-border bg-oosby-surface-2 p-6">
+                <h3 class="mb-3 text-xl font-semibold text-oosby-plum">✏️ Right to Rectification</h3>
+                <p class="text-oosby-text">
+                  You can correct or update your information at any time through your account settings, 
+                  or by contacting us.
+                </p>
+              </Card>
+
+              <Card class="border-oosby-border bg-oosby-surface-2 p-6">
+                <h3 class="mb-3 text-xl font-semibold text-oosby-plum">🗑️ Right to Erasure</h3>
+                <p class="text-oosby-text">
+                  You can delete your account and all associated data at any time. 
+                  We'll permanently remove your information immediately.
+                </p>
+              </Card>
+
+              <Card class="border-oosby-border bg-oosby-surface-2 p-6">
+                <h3 class="mb-3 text-xl font-semibold text-oosby-plum">📦 Right to Data Portability</h3>
+                <p class="text-oosby-text">
+                  You can export your data in a common format to take with you if you leave Oosby.
+                </p>
+              </Card>
+
+              <Card class="border-oosby-border bg-oosby-surface-2 p-6">
+                <h3 class="mb-3 text-xl font-semibold text-oosby-plum">🛑 Right to Object</h3>
+                <p class="text-oosby-text">
+                  You can object to processing of your data for marketing or offers. 
+                  You control what communications you receive.
+                </p>
+              </Card>
+            </div>
+
+            <div class="mt-8 bg-oosby-plum/5 p-6 rounded-xl border border-oosby-plum/20">
+              <h3 class="mb-3 text-lg font-semibold text-oosby-plum">How to Exercise Your Rights</h3>
+              <p class="text-oosby-text mb-3">
+                Most rights can be exercised directly through your Oosby account settings. 
+                For other requests, contact us at:
+              </p>
+              <p class="text-oosby-text">
+                <a href="mailto:privacy@oosby.com" class="text-oosby-pink-func hover:text-oosby-pink underline font-medium">
+                  privacy@oosby.com
+                </a>
+              </p>
+              <p class="text-sm text-oosby-text-muted mt-3">
+                We'll respond to all requests within 30 days.
+              </p>
+            </div>
+          </section>
+
+          <!-- 6. Data Retention -->
+          <section>
+            <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+              6. Data Retention
+            </h2>
+            
+            <p class="mb-6 text-lg text-oosby-text">
+              We keep your information only as long as necessary to provide Oosby's services:
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-4 p-4 bg-oosby-gray rounded-lg">
+                <div class="w-3 h-3 bg-oosby-pink-func rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p class="font-medium text-oosby-plum">Active accounts</p>
+                  <p class="text-oosby-text text-sm">Data retained while your account is active and for legitimate business purposes</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-4 bg-oosby-gray rounded-lg">
+                <div class="w-3 h-3 bg-oosby-pink-func rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p class="font-medium text-oosby-plum">Closed accounts</p>
+                  <p class="text-oosby-text text-sm">Personal data deleted immediately upon account closure</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-4 bg-oosby-gray rounded-lg">
+                <div class="w-3 h-3 bg-oosby-pink-func rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p class="font-medium text-oosby-plum">Legal requirements</p>
+                  <p class="text-oosby-text text-sm">Some data may be retained longer for legal, tax, or regulatory compliance (typically 7 years)</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-4 bg-oosby-gray rounded-lg">
+                <div class="w-3 h-3 bg-oosby-pink-func rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p class="font-medium text-oosby-plum">Aggregated data</p>
+                  <p class="text-oosby-text text-sm">Anonymous usage statistics may be retained indefinitely for service improvement</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 7. International Transfers -->
+          <section>
+            <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+              7. International Data Transfers
+            </h2>
+            
+            <div class="bg-oosby-teal/10 p-6 rounded-xl border border-oosby-teal/20">
+              <p class="text-lg font-medium text-oosby-plum mb-4">
+                For UK users: Your data stays in the UK
+              </p>
+              <p class="text-oosby-text mb-4">
+                We store and process UK users' personal data within the United Kingdom using UK-based secure data centers.
+              </p>
+              <p class="text-oosby-text text-sm">
+                Some service providers (like Apple or Google for authentication) may process data internationally, 
+                but this is done under appropriate safeguards and adequacy decisions.
+              </p>
+            </div>
+          </section>
+
+          <!-- 8. Changes to Privacy Policy -->
+          <section>
+            <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+              8. Changes to This Privacy Policy
+            </h2>
+            
+            <p class="mb-4 text-oosby-text">
+              We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements.
+            </p>
+
+            <div class="bg-oosby-gray p-6 rounded-xl">
+              <h3 class="mb-3 text-lg font-semibold text-oosby-plum">When We Update This Policy</h3>
+              <ul class="space-y-2 text-oosby-text">
+                <li>• We'll notify you by email if there are significant changes</li>
+                <li>• We'll update the "Last updated" date at the top of this page</li>
+                <li>• You'll be notified in the app of any material changes</li>
+                <li>• Continued use of Oosby means you accept the updated policy</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- 9. Contact Us -->
+          <section>
+            <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+              9. Contact Us
+            </h2>
+            
+            <p class="mb-6 text-lg text-oosby-text">
+              If you have any questions about this Privacy Policy or how we handle your data, please get in touch:
+            </p>
+
+            <div class="grid gap-6 md:grid-cols-2">
+              <Card class="border-oosby-border bg-oosby-surface-2 p-6">
+                <h3 class="mb-3 text-lg font-semibold text-oosby-plum">Data Protection Officer</h3>
+                <p class="text-oosby-text mb-2">
+                  <a href="mailto:privacy@oosby.com" class="text-oosby-pink-func hover:text-oosby-pink underline">
+                    privacy@oosby.com
+                  </a>
+                </p>
+                <p class="text-sm text-oosby-text-muted">For privacy-related questions and requests</p>
+              </Card>
+
+              <Card class="border-oosby-border bg-oosby-surface-2 p-6">
+                <h3 class="mb-3 text-lg font-semibold text-oosby-plum">General Support</h3>
+                <p class="text-oosby-text mb-2">
+                  <a href="mailto:support@oosby.com" class="text-oosby-pink-func hover:text-oosby-pink underline">
+                    support@oosby.com
+                  </a>
+                </p>
+                <p class="text-sm text-oosby-text-muted">For general questions and support</p>
+              </Card>
+            </div>
+
+            <div class="mt-8 bg-oosby-gray p-6 rounded-xl">
+              <h3 class="mb-3 text-lg font-semibold text-oosby-plum">Company Information</h3>
+              <div class="text-oosby-text space-y-1">
+                <p><strong>Ridley Industries Ltd</strong></p>
+                <p>1st Floor Blackdown House</p>
+                <p>Blackbrook Business Park</p>
+                <p>TA1 2PX, United Kingdom</p>
+                <p class="pt-2 text-sm text-oosby-text-muted">
+                  Registered in England and Wales, Company number: 07297291
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-8 bg-oosby-plum/5 p-6 rounded-xl border border-oosby-plum/20">
+              <h3 class="mb-3 text-lg font-semibold text-oosby-plum">Regulatory Authority</h3>
+              <p class="text-oosby-text mb-3">
+                If you're not satisfied with our response to privacy concerns, you can contact the UK data protection regulator:
+              </p>
+              <p class="text-oosby-text">
+                <strong>Information Commissioner's Office (ICO)</strong><br />
+                Website: <a href="https://ico.org.uk" class="text-oosby-pink-func hover:text-oosby-pink underline" target="_blank" rel="noopener">ico.org.uk</a><br />
+                Phone: 0303 123 1113
+              </p>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer - Same as other pages -->
+    <footer class="bg-black py-8">
+      <div class="px-6 lg:px-16">
+        <div class="grid gap-8 md:grid-cols-4 lg:grid-cols-5">
+          <!-- Logo -->
+          <div>
+            <a href="/">
+              <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert mb-4" />
+            </a>
+            <p class="text-xs text-white/60 leading-relaxed max-w-48">
+              Oosby is your quietly clever<br />household companion.<br />Built for calm, designed for trust.
+            </p>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Company</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/about" class="text-xs text-white/90 transition hover:text-white">About</a>
+              </li>
+              <li>
+                <a href="/contact" class="text-xs text-white/90 transition hover:text-white">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Useful Links -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Useful Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/premium" class="text-xs text-white/90 transition hover:text-white">Premium</a>
+              </li>
+              <li>
+                <a href="/support" class="text-xs text-white/90 transition hover:text-white">Support</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Legal</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/trust" class="text-xs text-white/90 transition hover:text-white">Trust</a>
+              </li>
+              <li>
+                <a href="/privacy" class="text-xs text-white transition hover:text-white">Privacy</a>
+              </li>
+              <li>
+                <a href="/terms" class="text-xs text-white/90 transition hover:text-white">Terms</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- App Links -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Get Oosby</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="https://app.oosby.com/signin" class="text-xs text-white/90 transition hover:text-white">Sign In</a>
+              </li>
+              <li>
+                <a href="https://app.oosby.com/register" class="text-xs text-white/90 transition hover:text-white">Sign Up</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="mt-8 border-t border-white/10 pt-4">
+          <p class="text-center text-xs text-white/50">
+            © Oosby 2025. Built with care in the UK.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</Layout>

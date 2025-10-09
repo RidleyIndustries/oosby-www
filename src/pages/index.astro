@@ -109,7 +109,9 @@ const content = {
   <div class="min-h-screen bg-oosby-bg">
     <!-- Navigation Bar - Black -->
     <header class="sticky top-0 z-50 h-16 border-b border-white/10 bg-black backdrop-blur-sm">
-      <nav class="flex h-full items-center justify-between px-6 lg:px-16">
+      <!-- Skip to main content link -->
+      <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-oosby-plum text-white px-4 py-2 rounded-md z-50">Skip to main content</a>
+      <nav class="flex h-full items-center justify-between px-6 lg:px-16" aria-label="Main navigation">
         <!-- Logo -->
         <div class="flex items-center gap-2">
           <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert" />
@@ -118,12 +120,12 @@ const content = {
         <!-- Navigation Links & Actions -->
         <div class="flex items-center gap-6">
           <a
-            href="#solution"
+            href="/premium"
             class="hidden text-sm text-white/90 transition hover:text-white md:block"
           >
             Premium
           </a>
-          <a href="#" class="hidden text-sm text-white/90 transition hover:text-white md:block">
+          <a href="/support" class="hidden text-sm text-white/90 transition hover:text-white md:block">
             Support
           </a>
           <Button
@@ -146,42 +148,72 @@ const content = {
       </nav>
     </header>
 
-    <!-- Section 1: Hero - Full-bleed image with overlay -->
-    <section class="relative overflow-hidden">
-      <!-- Background image - full bleed -->
-      <div
-        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style="background-image: url('/images/hero-bg.jpg')"
-      ></div>
+    <!-- Section 1: Hero - Product showcase with side-by-side layout -->
+    <main id="main-content">
+    <section class="bg-gradient-to-br from-oosby-bg via-white to-oosby-gray py-20 lg:py-28">
+      <div class="container mx-auto px-6 lg:px-16">
+        <div class="mx-auto max-w-7xl">
+          <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+            <!-- Left: Content -->
+            <div class="lg:max-w-xl">
+              <!-- H1 uses DM Serif Display - plum for contrast -->
+              <h1 class="mb-6 text-5xl font-normal tracking-tight text-oosby-plum lg:text-6xl font-display">
+                {content.hero.headline}
+              </h1>
 
-      <!-- Dark overlay for text contrast -->
-      <div class="absolute inset-0 bg-black/60"></div>
+              <!-- Subhead - text with good contrast -->
+              <p class="mb-10 text-xl font-medium leading-relaxed text-oosby-text lg:text-2xl">
+                {content.hero.subhead}
+              </p>
 
-      <!-- Content -->
-      <div class="relative px-6 py-16 lg:px-16 lg:py-24">
-        <div class="mx-auto max-w-4xl text-center">
-          <!-- H1 uses DM Serif Display - white for contrast -->
-          <h1 class="mb-6 text-5xl font-normal tracking-tight text-white lg:text-6xl font-display">
-            {content.hero.headline}
-          </h1>
+              <!-- CTA -->
+              <div class="flex flex-col items-start gap-4 sm:flex-row">
+                <Button
+                  variant="oosby-primary"
+                  size="lg"
+                  href="https://app.oosby.com/register"
+                  class="bg-oosby-pink-func hover:bg-oosby-pink"
+                >
+                  {content.hero.cta.primary} →
+                </Button>
+                <p class="text-sm font-medium text-oosby-text-muted">
+                  {content.ctaBlock.reassurance}
+                </p>
+              </div>
+            </div>
 
-          <!-- Subhead - white with slight transparency -->
-          <p
-            class="mx-auto mb-10 max-w-2xl text-xl font-medium leading-relaxed text-white/90 lg:text-2xl"
-          >
-            {content.hero.subhead}
-          </p>
-
-          <!-- CTA -->
-          <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button
-              variant="oosby-primary"
-              size="lg"
-              href="https://app.oosby.com/register"
-              class="bg-oosby-pink-func hover:bg-oosby-pink"
-            >
-              {content.hero.cta.primary} →
-            </Button>
+            <!-- Right: Product Screenshot -->
+            <div class="relative">
+              <!-- Decorative background elements -->
+              <div class="absolute -inset-4 bg-gradient-to-r from-oosby-pink-func/20 to-oosby-plum/20 rounded-3xl blur-lg"></div>
+              
+              <!-- Main screenshot container -->
+              <div class="relative">
+                <div class="overflow-hidden rounded-2xl bg-white shadow-2xl">
+                  <img
+                    src="/images/product/hero-dashboard.png"
+                    alt="Oosby dashboard showing organized household items and reminders"
+                    class="w-full h-auto"
+                    loading="eager"
+                  />
+                </div>
+                
+                <!-- Floating trust indicators -->
+                <div class="absolute -bottom-4 -left-4 bg-white rounded-xl px-4 py-2 shadow-lg border border-oosby-border">
+                  <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-oosby-teal-func rounded-full"></div>
+                    <span class="text-sm font-medium text-oosby-plum">UK-hosted</span>
+                  </div>
+                </div>
+                
+                <div class="absolute -top-4 -right-4 bg-white rounded-xl px-4 py-2 shadow-lg border border-oosby-border">
+                  <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-oosby-pink-func rounded-full"></div>
+                    <span class="text-sm font-medium text-oosby-plum">No tracking</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -287,20 +319,33 @@ const content = {
             </div>
           </div>
 
-          <!-- Demo Card -->
-          <div class="mx-auto max-w-md">
-            <Card class="border-oosby-border bg-oosby-surface-2 hover:bg-oosby-card-hover">
-              <div class="p-6">
-                <div class="flex items-center gap-4">
-                  <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-oosby-pink/10">
-                    <!-- Check circle icon -->
-                    <svg class="h-6 w-6 text-oosby-pink-func" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <!-- Enhanced Demo Card -->
+          <div class="mx-auto max-w-lg">
+            <Card class="border-oosby-pink/20 bg-gradient-to-br from-oosby-pink/5 to-oosby-plum/5 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="p-8">
+                <div class="flex items-center gap-6">
+                  <!-- Car icon -->
+                  <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-oosby-pink/10 border-2 border-oosby-pink/20">
+                    <svg class="h-8 w-8 text-oosby-pink-func" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                      <path d="M9 17a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" />
+                      <path d="M19 17a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" />
+                      <path d="M5 17h-2v-6l2-5h9l4 5v6h-2" />
+                      <path d="M5 12h4" />
+                      <path d="M13 12h4" />
                     </svg>
                   </div>
                   <div class="flex-1">
-                    <h3 class="text-xl font-semibold text-oosby-plum mb-1">{content.solution.demoCard.title}</h3>
-                    <p class="text-sm text-oosby-text-muted">{content.solution.demoCard.subtitle} • Reminder set 2 days before</p>
+                    <div class="flex items-center justify-between mb-2">
+                      <h3 class="text-2xl font-bold text-oosby-plum">{content.solution.demoCard.title}</h3>
+                      <div class="bg-oosby-teal/10 text-oosby-teal-func px-3 py-1 rounded-full text-xs font-semibold">
+                        Active
+                      </div>
+                    </div>
+                    <p class="text-oosby-text font-medium mb-3">{content.solution.demoCard.subtitle}</p>
+                    <div class="flex items-center gap-2 text-sm text-oosby-text-muted">
+                      <div class="w-2 h-2 bg-oosby-pink-func rounded-full"></div>
+                      <span>Smart reminder set</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -316,6 +361,108 @@ const content = {
               class="bg-oosby-plum hover:bg-oosby-plum/90 text-white"
             >
               {content.solution.cta} →
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3.5: Feature Showcase - Screenshots in action -->
+    <section class="bg-oosby-gray py-24">
+      <div class="container mx-auto px-6 lg:px-16">
+        <div class="mx-auto max-w-6xl">
+          <div class="text-center mb-16">
+            <h2 class="mb-6 text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight">
+              See it in action
+            </h2>
+            <p class="text-xl text-oosby-text max-w-3xl mx-auto">
+              Simple, calm interfaces designed to make life admin feel effortless.
+            </p>
+          </div>
+
+          <div class="grid gap-12 lg:gap-20">
+            <!-- Feature 1: Adding Items -->
+            <div class="grid items-center gap-12 lg:grid-cols-2">
+              <div class="lg:order-1">
+                <h3 class="mb-4 text-3xl font-bold text-oosby-plum font-display-tight">
+                  Adding something new
+                </h3>
+                <p class="text-lg text-oosby-text mb-6 leading-relaxed">
+                  Clean, guided flows make it easy to add anything that matters to your household. 
+                  From cars and insurance to appointments and warranties — all in one place.
+                </p>
+                <div class="flex items-center gap-4">
+                  <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-oosby-teal-func rounded-full"></div>
+                    <span class="text-sm font-medium text-oosby-text-muted">Smart form completion</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-oosby-pink-func rounded-full"></div>
+                    <span class="text-sm font-medium text-oosby-text-muted">Auto-categorization</span>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:order-2">
+                <div class="relative">
+                  <div class="absolute -inset-3 bg-gradient-to-r from-oosby-teal-func/20 to-oosby-plum/20 rounded-2xl blur-sm"></div>
+                  <div class="relative overflow-hidden rounded-2xl bg-white shadow-xl">
+                    <img
+                      src="/images/product/add-item.png"
+                      alt="Adding a new item in Oosby - clean, simple interface"
+                      class="w-full h-auto"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature 2: Organized Sections -->
+            <div class="grid items-center gap-12 lg:grid-cols-2">
+              <div class="lg:order-2">
+                <h3 class="mb-4 text-3xl font-bold text-oosby-plum font-display-tight">
+                  Everything in its place
+                </h3>
+                <p class="text-lg text-oosby-text mb-6 leading-relaxed">
+                  Your household information organized into clear, manageable sections. 
+                  Find what you need quickly, see what's coming up, and stay ahead of important dates.
+                </p>
+                <div class="flex items-center gap-4">
+                  <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-oosby-pink-func rounded-full"></div>
+                    <span class="text-sm font-medium text-oosby-text-muted">Smart organization</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-oosby-teal-func rounded-full"></div>
+                    <span class="text-sm font-medium text-oosby-text-muted">At-a-glance status</span>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:order-1">
+                <div class="relative">
+                  <div class="absolute -inset-3 bg-gradient-to-l from-oosby-pink-func/20 to-oosby-teal/20 rounded-2xl blur-sm"></div>
+                  <div class="relative overflow-hidden rounded-2xl bg-white shadow-xl">
+                    <img
+                      src="/images/product/example-section-screen.png"
+                      alt="Oosby section view showing organized household information"
+                      class="w-full h-auto"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom CTA -->
+          <div class="text-center mt-16">
+            <Button
+              variant="oosby-primary"
+              size="lg"
+              href="https://app.oosby.com/register"
+              class="bg-oosby-pink-func hover:bg-oosby-pink"
+            >
+              Try it yourself →
             </Button>
           </div>
         </div>
@@ -453,8 +600,10 @@ const content = {
       </div>
     </section>
 
+    </main>
+    
     <!-- Section 8: Footer - Spotify-style full-bleed -->
-    <footer class="bg-black py-8">
+    <footer class="bg-black py-8" aria-label="Site footer">
       <div class="px-6 lg:px-16">
         <!-- Logo and Columns -->
         <div class="grid gap-8 md:grid-cols-4 lg:grid-cols-5">
@@ -484,10 +633,10 @@ const content = {
             <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Useful Links</h3>
             <ul class="space-y-2">
               <li>
-                <a href="#solution" class="text-xs text-white/90 transition hover:text-white">Premium</a>
+                <a href="/premium" class="text-xs text-white/90 transition hover:text-white">Premium</a>
               </li>
               <li>
-                <a href="#" class="text-xs text-white/90 transition hover:text-white">Support</a>
+                <a href="/support" class="text-xs text-white/90 transition hover:text-white">Support</a>
               </li>
             </ul>
           </div>
@@ -497,13 +646,13 @@ const content = {
             <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Legal</h3>
             <ul class="space-y-2">
               <li>
-                <a href="/privacy" class="text-xs text-white/90 transition hover:text-white">{content.footer.links.privacy}</a>
-              </li>
-              <li>
-                <a href="/terms" class="text-xs text-white/90 transition hover:text-white">{content.footer.links.terms}</a>
-              </li>
-              <li>
                 <a href="/trust" class="text-xs text-white/90 transition hover:text-white">Trust</a>
+              </li>
+              <li>
+                <a href="/privacy" class="text-xs text-white/90 transition hover:text-white">Privacy</a>
+              </li>
+              <li>
+                <a href="/terms" class="text-xs text-white/90 transition hover:text-white">Terms</a>
               </li>
             </ul>
           </div>

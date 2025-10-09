@@ -34,6 +34,41 @@ const { title, description } = Astro.props;
 		
 		<title>{title}</title>
 		
+		<!-- Canonical URL -->
+		<link rel="canonical" href={`https://oosby.com${Astro.url.pathname}`} />
+		
+		<!-- Schema.org structured data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "SoftwareApplication",
+			"name": "Oosby",
+			"description": "Life admin, sorted. Oosby keeps track of the boring-but-important stuff - from dentist appointments to insurance renewals - automatically and just in time.",
+			"url": "https://oosby.com",
+			"applicationCategory": "ProductivityApplication",
+			"operatingSystem": "Web, iOS, Android",
+			"provider": {
+				"@type": "Organization",
+				"name": "Ridley Industries Ltd",
+				"url": "https://oosby.com",
+				"sameAs": [
+					"https://app.oosby.com"
+				],
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"email": "support@oosby.com",
+					"contactType": "customer service"
+				}
+			},
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "GBP",
+				"description": "Free tier with basic features"
+			}
+		}
+		</script>
+		
 		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

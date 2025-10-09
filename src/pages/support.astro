@@ -1,0 +1,380 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Support - Oosby" description="We're here to help. Oosby is designed to make life simpler — not to make you hunt for help. Find answers to common questions or get in touch.">
+  <div class="min-h-screen bg-oosby-bg">
+    <!-- Navigation Bar - Black -->
+    <header class="sticky top-0 z-50 h-16 border-b border-white/10 bg-black backdrop-blur-sm">
+      <nav class="flex h-full items-center justify-between px-6 lg:px-16">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <a href="/">
+            <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert" />
+          </a>
+        </div>
+
+        <!-- Navigation Links & Actions -->
+        <div class="flex items-center gap-6">
+          <a href="/premium" class="hidden text-sm text-white/90 transition hover:text-white md:block">
+            Premium
+          </a>
+          <a href="/support" class="hidden text-sm text-white transition hover:text-white md:block">
+            Support
+          </a>
+          <Button
+            variant="outline"
+            size="sm"
+            href="https://app.oosby.com/register"
+            class="hidden border-white/20 bg-transparent text-white hover:bg-white/10 md:flex"
+          >
+            Sign Up
+          </Button>
+          <Button
+            variant="oosby-primary"
+            size="sm"
+            href="https://app.oosby.com/signin"
+            class="bg-oosby-pink-func hover:bg-oosby-pink"
+          >
+            Sign In
+          </Button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 lg:py-28">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl text-center">
+          <h1 class="mb-6 text-5xl font-normal tracking-tight text-oosby-plum lg:text-6xl font-display">
+            Support
+          </h1>
+          <p class="mx-auto mb-10 max-w-2xl text-2xl font-medium leading-relaxed text-oosby-text lg:text-3xl">
+            We're here to help.
+          </p>
+          <p class="mx-auto max-w-3xl text-xl leading-relaxed text-oosby-text-muted">
+            Oosby is designed to make life simpler — not to make you hunt for help.<br />
+            If you ever get stuck, or something doesn't feel right, we'll get you sorted quickly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-oosby-gray">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl text-center">
+          <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+            💬 Get in touch
+          </h2>
+          
+          <Card class="border-oosby-border bg-oosby-bg p-10 max-w-2xl mx-auto">
+            <div class="space-y-6">
+              <p class="text-lg text-oosby-text">
+                The best way to reach us is by email:
+              </p>
+              <div class="text-center">
+                <a 
+                  href="mailto:support@oosby.com" 
+                  class="inline-flex items-center gap-2 text-2xl font-bold text-oosby-pink-func hover:text-oosby-pink transition-colors"
+                >
+                  📧 support@oosby.com
+                </a>
+              </div>
+              <div class="bg-oosby-teal/10 p-6 rounded-xl border border-oosby-teal/20">
+                <p class="text-oosby-text font-medium">
+                  We aim to reply within <strong>one working day</strong>.
+                </p>
+                <p class="text-sm text-oosby-text-muted mt-3">
+                  Please include as much detail as you can (for example: which "thing" you were adding, or what you saw on screen) — it helps us help you faster.
+                </p>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl">
+          <h2 class="mb-16 text-center text-4xl font-bold tracking-[-0.015em] text-oosby-plum lg:text-5xl font-display-tight">
+            🔍 Frequently Asked Questions
+          </h2>
+          
+          <div class="space-y-8">
+            
+            <!-- FAQ 1 -->
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <h3 class="text-2xl font-bold text-oosby-plum mb-4">
+                1. What is Oosby?
+              </h3>
+              <p class="text-lg leading-relaxed text-oosby-text">
+                Oosby is your quietly clever household companion.
+                It remembers the boring-but-important stuff — from MOTs to insurance renewals — and helps you stay on top of it all, without stress or clutter.
+              </p>
+            </Card>
+
+            <!-- FAQ 2 -->
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <h3 class="text-2xl font-bold text-oosby-plum mb-4">
+                2. Is Oosby free to use?
+              </h3>
+              <div class="space-y-4 text-lg leading-relaxed text-oosby-text">
+                <p>Yes. Oosby's core features are free.</p>
+                <p>
+                  We plan to offer optional paid features later — for example, enhanced storage, sharing options, or smart household insights — but you'll always know before you pay for anything.
+                </p>
+              </div>
+            </Card>
+
+            <!-- FAQ 3 -->
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <h3 class="text-2xl font-bold text-oosby-plum mb-4">
+                3. How secure is my information?
+              </h3>
+              <div class="space-y-4">
+                <p class="text-lg font-medium text-oosby-text">Very.</p>
+                <ul class="space-y-3 text-lg text-oosby-text ml-4">
+                  <li>• UK users' data stays in the UK.</li>
+                  <li>• All data is encrypted in transit (HTTPS) and at rest.</li>
+                  <li>• We use <strong>passkeys</strong> and secure sign-in via <strong>Apple</strong> or <strong>Google</strong> — no passwords to steal.</li>
+                  <li>• Your information is never shared with advertisers.</li>
+                </ul>
+                <p class="text-lg text-oosby-text">
+                  For full details, visit our <a href="/trust" class="text-oosby-pink-func hover:text-oosby-pink underline font-medium">Trust page</a>.
+                </p>
+              </div>
+            </Card>
+
+            <!-- FAQ 4 -->
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <h3 class="text-2xl font-bold text-oosby-plum mb-4">
+                4. How does Oosby make money if it doesn't sell data?
+              </h3>
+              <div class="space-y-4 text-lg leading-relaxed text-oosby-text">
+                <p>We don't sell or share your information. Ever.</p>
+                <p>
+                  When you're due a renewal or key date, Oosby may show you relevant offers — but only <strong>when you choose to see them</strong>.
+                  If you take up an offer, Oosby may receive a small referral fee from the provider.
+                </p>
+                <p>
+                  That's how we keep Oosby sustainable — while keeping your data private.
+                </p>
+              </div>
+            </Card>
+
+            <!-- FAQ 5 -->
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <h3 class="text-2xl font-bold text-oosby-plum mb-4">
+                5. Why does Oosby ask for permissions or personal details?
+              </h3>
+              <div class="space-y-4 text-lg leading-relaxed text-oosby-text">
+                <p>
+                  We only ask for what's needed to help Oosby work properly — for example, your car registration so we can check its MOT date, or your postcode for location-specific reminders.
+                </p>
+                <p class="font-medium text-oosby-plum">
+                  You stay in control at all times.
+                </p>
+              </div>
+            </Card>
+
+            <!-- FAQ 6 -->
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <h3 class="text-2xl font-bold text-oosby-plum mb-4">
+                6. I've forgotten how to sign in. What should I do?
+              </h3>
+              <div class="space-y-4 text-lg leading-relaxed text-oosby-text">
+                <p>Oosby doesn't use passwords.</p>
+                <p>
+                  Just sign in again using the same <strong>Apple</strong>, <strong>Google</strong>, or <strong>passkey</strong> account you used originally.
+                </p>
+                <p>
+                  If you're still having trouble, drop us an email — we can help.
+                </p>
+              </div>
+            </Card>
+
+            <!-- FAQ 7 -->
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <h3 class="text-2xl font-bold text-oosby-plum mb-4">
+                7. Can I share Oosby with family or housemates?
+              </h3>
+              <div class="space-y-4 text-lg leading-relaxed text-oosby-text">
+                <p class="font-medium text-oosby-teal-func">Shared access is coming soon!</p>
+                <p>
+                  Right now, each person has their own account, but we're working on secure household sharing so everyone can stay in sync.
+                </p>
+              </div>
+            </Card>
+
+            <!-- FAQ 8 -->
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <h3 class="text-2xl font-bold text-oosby-plum mb-4">
+                8. Can I delete my data?
+              </h3>
+              <div class="space-y-4 text-lg leading-relaxed text-oosby-text">
+                <p>Yes, at any time.</p>
+                <p>
+                  You can delete your account and all associated data directly from within the app.
+                  We'll permanently remove your information from our systems within 30 days, except where we're legally required to retain it.
+                </p>
+              </div>
+            </Card>
+
+            <!-- FAQ 9 -->
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <h3 class="text-2xl font-bold text-oosby-plum mb-4">
+                9. Where can I read your policies?
+              </h3>
+              <div class="space-y-4 text-lg leading-relaxed text-oosby-text">
+                <p>You can read our:</p>
+                <ul class="space-y-2 ml-4">
+                  <li>• <a href="/privacy" class="text-oosby-pink-func hover:text-oosby-pink underline">Privacy & Cookies Policy</a></li>
+                  <li>• <a href="/terms" class="text-oosby-pink-func hover:text-oosby-pink underline">Terms & Conditions</a></li>
+                  <li>• <a href="/trust" class="text-oosby-pink-func hover:text-oosby-pink underline">Trust page</a></li>
+                </ul>
+                <p class="font-medium">
+                  They're written in plain English — no legalese, no jargon.
+                </p>
+              </div>
+            </Card>
+
+            <!-- FAQ 10 -->
+            <Card class="border-oosby-border bg-oosby-surface-2 p-8">
+              <h3 class="text-2xl font-bold text-oosby-plum mb-4">
+                10. How do I suggest a feature or report a bug?
+              </h3>
+              <div class="space-y-4 text-lg leading-relaxed text-oosby-text">
+                <p>We love hearing from users.</p>
+                <p>
+                  Email us at <a href="mailto:support@oosby.com" class="text-oosby-pink-func hover:text-oosby-pink underline font-medium">support@oosby.com</a> with your ideas, suggestions, or issues.
+                </p>
+                <p>
+                  We can't promise to build everything, but we read every message and reply personally.
+                </p>
+              </div>
+            </Card>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thank You Section -->
+    <section class="py-20 bg-oosby-gray">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-4xl text-center">
+          <h2 class="mb-8 text-3xl font-bold tracking-[-0.015em] text-oosby-plum font-display-tight">
+            🧡 Thank you
+          </h2>
+          
+          <div class="bg-oosby-plum/5 p-10 rounded-2xl border border-oosby-plum/10">
+            <div class="space-y-6 text-lg leading-relaxed text-oosby-text">
+              <p>
+                Every suggestion, every bit of feedback, every kind word helps us make Oosby better.
+              </p>
+              <p class="text-xl font-medium text-oosby-plum">
+                We're a small team with a big belief: that technology should make life calmer, not noisier.
+              </p>
+              <p class="font-medium">
+                Thanks for being part of it.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              variant="oosby-primary"
+              size="lg"
+              href="https://app.oosby.com/register"
+              class="bg-oosby-plum hover:bg-oosby-plum/90 text-white"
+            >
+              Get started →
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              href="mailto:support@oosby.com"
+              class="border-oosby-plum text-oosby-plum hover:bg-oosby-plum hover:text-white"
+            >
+              📧 Contact support
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer - Same as homepage -->
+    <footer class="bg-black py-8">
+      <div class="px-6 lg:px-16">
+        <!-- Logo and Columns -->
+        <div class="grid gap-8 md:grid-cols-4 lg:grid-cols-5">
+          <!-- Logo -->
+          <div>
+            <a href="/">
+              <img src="/logo.svg" alt="Oosby" class="h-8 w-auto brightness-0 invert mb-4" />
+            </a>
+            <p class="text-xs text-white/60 leading-relaxed max-w-48">
+              Oosby is your quietly clever<br />household companion.<br />Built for calm, designed for trust.
+            </p>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Company</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/about" class="text-xs text-white/90 transition hover:text-white">About</a>
+              </li>
+              <li>
+                <a href="/contact" class="text-xs text-white/90 transition hover:text-white">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Useful Links -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Useful Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/premium" class="text-xs text-white/90 transition hover:text-white">Premium</a>
+              </li>
+              <li>
+                <a href="/support" class="text-xs text-white/90 transition hover:text-white">Support</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Legal</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/trust-privacy" class="text-xs text-white/90 transition hover:text-white">Privacy</a>
+              </li>
+              <li>
+                <a href="/terms" class="text-xs text-white/90 transition hover:text-white">Terms</a>
+              </li>
+              <li>
+                <a href="/trust-privacy" class="text-xs text-white/90 transition hover:text-white">Trust</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="mt-12 border-t border-white/10 pt-8">
+          <div class="flex justify-end">
+            <p class="text-xs text-white/60">
+              © Oosby 2025
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</Layout>
