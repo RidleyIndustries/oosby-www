@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 import Card from '../components/Card.astro';
+import '../styles/global.css';
 ---
 
 <Layout title="Cookie Policy - Oosby" description="Oosby's approach to cookies and tracking. Spoiler: we use hardly any, and we don't track you around the web.">
@@ -238,7 +239,7 @@ import Card from '../components/Card.astro';
               
               <div class="space-y-4">
                 <Card class="border-oosby-border bg-oosby-surface-2 p-6">
-                  <h3 class="mb-3 text-lg font-semibold text-oosby-plum">🌐 Browser Settings</h3>
+                <h3 class="mb-3 text-lg font-semibold text-oosby-plum">Browser Settings</h3>
                   <p class="text-oosby-text mb-3">
                     You can disable cookies entirely in your browser settings, but this may affect the functionality of websites (including Oosby).
                   </p>
@@ -248,7 +249,7 @@ import Card from '../components/Card.astro';
                 </Card>
 
                 <Card class="border-oosby-border bg-oosby-surface-2 p-6">
-                  <h3 class="mb-3 text-lg font-semibold text-oosby-plum">🔒 Incognito/Private Mode</h3>
+                <h3 class="mb-3 text-lg font-semibold text-oosby-plum">Incognito/Private Mode</h3>
                   <p class="text-oosby-text mb-3">
                     Using private browsing will prevent most cookies from being stored permanently.
                   </p>
@@ -343,7 +344,7 @@ import Card from '../components/Card.astro';
             <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">Useful Links</h3>
             <ul class="space-y-2">
               <li>
-                <a href="/premium" class="text-xs text-white/90 transition hover:text-white">Premium</a>
+                <a href="/premium" class="text-xs text-white/90 transition hover:text-white">Pricing</a>
               </li>
               <li>
                 <a href="/support" class="text-xs text-white/90 transition hover:text-white">Support</a>
