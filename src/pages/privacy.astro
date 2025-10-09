@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 import Card from '../components/Card.astro';
+import { Check, Edit, Trash2, Package, Ban } from 'lucide-astro';
 import '../styles/global.css';
 ---
 
@@ -309,7 +310,10 @@ import '../styles/global.css';
 
             <div class="space-y-6">
               <Card class="border-oosby-border bg-oosby-surface-2 p-6">
-                <h3 class="mb-3 text-xl font-semibold text-oosby-plum">✅ Right to Access</h3>
+                <div class="flex items-center gap-3 mb-3">
+                  <Check class="w-6 h-6 text-oosby-teal-func" />
+                  <h3 class="text-xl font-semibold text-oosby-plum">Right to Access</h3>
+                </div>
                 <p class="text-oosby-text">
                   You can request a copy of all personal information we hold about you. 
                   Most of this is available directly in your Oosby account.
@@ -317,7 +321,10 @@ import '../styles/global.css';
               </Card>
 
               <Card class="border-oosby-border bg-oosby-surface-2 p-6">
-                <h3 class="mb-3 text-xl font-semibold text-oosby-plum">✏️ Right to Rectification</h3>
+                <div class="flex items-center gap-3 mb-3">
+                  <Edit class="w-6 h-6 text-oosby-teal-func" />
+                  <h3 class="text-xl font-semibold text-oosby-plum">Right to Rectification</h3>
+                </div>
                 <p class="text-oosby-text">
                   You can correct or update your information at any time through your account settings, 
                   or by contacting us.
@@ -325,7 +332,10 @@ import '../styles/global.css';
               </Card>
 
               <Card class="border-oosby-border bg-oosby-surface-2 p-6">
-                <h3 class="mb-3 text-xl font-semibold text-oosby-plum">🗑️ Right to Erasure</h3>
+                <div class="flex items-center gap-3 mb-3">
+                  <Trash2 class="w-6 h-6 text-oosby-teal-func" />
+                  <h3 class="text-xl font-semibold text-oosby-plum">Right to Erasure</h3>
+                </div>
                 <p class="text-oosby-text">
                   You can delete your account and all associated data at any time. 
                   We'll permanently remove your information immediately.
@@ -333,14 +343,20 @@ import '../styles/global.css';
               </Card>
 
               <Card class="border-oosby-border bg-oosby-surface-2 p-6">
-                <h3 class="mb-3 text-xl font-semibold text-oosby-plum">📦 Right to Data Portability</h3>
+                <div class="flex items-center gap-3 mb-3">
+                  <Package class="w-6 h-6 text-oosby-teal-func" />
+                  <h3 class="text-xl font-semibold text-oosby-plum">Right to Data Portability</h3>
+                </div>
                 <p class="text-oosby-text">
                   You can export your data in a common format to take with you if you leave Oosby.
                 </p>
               </Card>
 
               <Card class="border-oosby-border bg-oosby-surface-2 p-6">
-                <h3 class="mb-3 text-xl font-semibold text-oosby-plum">🛑 Right to Object</h3>
+                <div class="flex items-center gap-3 mb-3">
+                  <Ban class="w-6 h-6 text-oosby-teal-func" />
+                  <h3 class="text-xl font-semibold text-oosby-plum">Right to Object</h3>
+                </div>
                 <p class="text-oosby-text">
                   You can object to processing of your data for marketing or offers. 
                   You control what communications you receive.

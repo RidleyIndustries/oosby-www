@@ -9,7 +9,8 @@ export default defineConfig({
   adapter: undefined, // Static site, no adapter needed
   site: 'https://www.oosby.com', // Your production URL
   build: {
-    assets: 'assets' // Custom assets directory for better caching
+    assets: 'assets', // Custom assets directory for better caching
+    inlineStylesheets: 'auto'
   },
   vite: {
     plugins: [tailwindcss()],
@@ -26,8 +27,5 @@ export default defineConfig({
     }
   },
   // Cloudflare Pages optimizations
-  compressHTML: true,
-  build: {
-    inlineStylesheets: 'auto'
-  }
+  compressHTML: true
 });

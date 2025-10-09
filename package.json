@@ -5,17 +5,27 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview", 
+    "preview": "astro preview",
     "astro": "astro",
     "build:cf": "astro build",
     "preview:cf": "wrangler pages dev dist",
     "deploy": "wrangler pages deploy dist",
     "check": "astro check",
-    "type-check": "astro check --no-emit"
+    "type-check": "astro check --no-emit",
+    "lint": "astro check",
+    "test:build": "astro build --dry-run",
+    "pre-commit": "npm run lint && npm run type-check && npm run test:build",
+    "prepare": "husky"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.4",
     "@tailwindcss/vite": "^4.1.14",
     "astro": "^5.14.1",
-    "tailwindcss": "^4.1.14"
+    "lucide-astro": "^0.545.0",
+    "tailwindcss": "^4.1.14",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
   }
 }
